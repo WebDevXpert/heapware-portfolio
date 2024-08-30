@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLayoutEffect } from 'react';
 import gsap from 'gsap';
 
-export default function BlogUs() {
+export default function Career1() {
     useLayoutEffect(() => {
         gsap.to(".anim-headline", {
           duration: 5,
@@ -21,11 +21,11 @@ export default function BlogUs() {
         });
       }, []);
   return (
-    <section className="relative bg-cover bg-center" >
+    <section className="relative bg-black bg-cover bg-center" >
       <div className="absolute inset-0
        opacity-50"></div>
       <div className="container mx-auto pt-40 relative z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold anim-headline opacity-0 text-teal-400">Blogs</h1>
+        <h1 className="text-4xl md:text-6xl font-bold anim-headline opacity-0 text-teal-400">Career</h1>
         <div className="flex justify-center anim-subheadline opacity-0 space-x-2 text-white mt-4">
           <Link href="/">
             <div className="hover:underline">Home</div>
