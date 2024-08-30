@@ -1,5 +1,5 @@
 import React from "react";
-import BlogUs from "../blogs/blog1/page";
+import Career1 from './career1/page';
 
 export default function JobCard() {
   const jobs = [
@@ -31,8 +31,8 @@ export default function JobCard() {
 
   return (
     <div>
-      <BlogUs />
-      <div className="flex items-center justify-center p-4 sm:p-8 md:p-12 lg:p-20">
+      <Career1 />
+      <div className="flex items-center justify-center bg-black p-4 sm:p-8 md:p-12 lg:p-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {jobs.map((job, index) => (
             <div

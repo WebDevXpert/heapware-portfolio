@@ -21,7 +21,7 @@ export default function BlogUs() {
         });
       }, []);
   return (
-    <section className="relative bg-cover bg-center" >
+    <section className="relative bg-black bg-cover bg-center" >
       <div className="absolute inset-0
        opacity-50"></div>
       <div className="container mx-auto pt-40 relative z-10 text-center">
