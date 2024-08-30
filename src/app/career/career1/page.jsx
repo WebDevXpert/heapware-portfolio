@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useLayoutEffect } from 'react';
 import gsap from 'gsap';
 
-export default function career1() {
+export default function Career1() {
     useLayoutEffect(() => {
         gsap.to(".anim-headline", {
           duration: 5,
