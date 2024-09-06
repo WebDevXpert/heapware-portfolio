@@ -43,7 +43,7 @@ const ItPartnerSection = () => {
   }, []);
 
   return (
-    <div className="achieve-section bg-black relative py-10  text-white min-h-screen overflow-hidden">
+    <div className="achieve-section bg-black relative px-14 text-white min-h-screen overflow-hidden">
       <div
         className="absolute bg-fixed inset-0 bg-cover bg-center"
         style={{
@@ -53,9 +53,9 @@ const ItPartnerSection = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black" />
       <div className="absolute inset-0 bg-gradient-to-b from-black" />
 
-      <div className="relative z-10 container mx-auto ">
+      <div className="relative z-10 container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between min-h-screen">
-          <div className="leading-relaxed  anim-default-section-card opacity-0 flex flex-col px-3 md:px-3 items-center justify-center">
+          <div className="leading-relaxed anim-default-section-card opacity-0 flex flex-col px-3 md:px-3 items-center justify-center">
             <div className="text-center lg:text-left">
               <h3 className="text-teal-400 mb-2 text-xl">Welcome to Ditech</h3>
               <h2 className="text-4xl lg:text-6xl font-bold mb-4 leading-tight">
@@ -107,10 +107,10 @@ const ItPartnerSection = () => {
             </div>
           </div>
 
-          <div className="text-center lg:text-left">
-            <div className="flex justify-center mb-5" ref={ref}>
+          <div className="text-center lg:ml-0 lg:text-left">
+            <div className="flex justify-center lg:ml-36 mb-5" ref={ref}>
               <div className="anim-default-section-card opacity-0 text-center md:mr-12 mr-12">
-                <h2 className="text-6xl text-teal-400 font-bold mb-1">
+                <h2 className="text-5xl md:text-6xl text-teal-400 font-bold mb-1">
                   {startCounting ? (
                     <CountUp start={0} end={19} duration={4} suffix="+" />
                   ) : (
@@ -120,7 +120,7 @@ const ItPartnerSection = () => {
                 <p className="text-sm mb-2">Years of Experience</p>
               </div>
               <div className="anim-default-section-card opacity-0 text-center">
-                <h2 className="text-6xl text-teal-400 font-bold mb-1">
+                <h2 className="text-5xl md:text-6xl text-teal-400 font-bold mb-1">
                   {startCounting ? (
                     <CountUp start={0} end={152} duration={4} suffix="k" />
                   ) : (
@@ -131,13 +131,13 @@ const ItPartnerSection = () => {
               </div>
             </div>
 
-            <div className="flex justify-center md:pt-10 lg:justify-start">
+            <div className="flex justify-center lg:justify-start">
               <Image
                 src="/waleed.jpeg"
                 width={400}
                 height={400}
                 alt="Decorative"
-                className=" anim-default-section-card opacity-0 rounded-lg w-3/4 lg:w-4/5"
+                className="anim-default-section-card sm:ml-16 md:ml-20 lg:ml-28 opacity-0 rounded-lg w-3/4 lg:w-4/5"
               />
             </div>
           </div>
