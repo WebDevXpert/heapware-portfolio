@@ -1,15 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import CountUp from "react-countup";
+// import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
+// import Image from "next/image";
 import AboutUs from "./about1/page";
+import ItPartnerSection from "../components/partnerSection/page";
 import CardList from "../components/cards/page";
 import TestimonialsSlider from "../components/testimonials/page";
 import ContactSection from "../components/contactSection/page";
 import Mission from "../components/mission/page";
 
-const ItPartnerSection = () => {
+const ItPartnerSection1 = () => {
   const [startCounting, setStartCounting] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.2,
@@ -27,7 +28,7 @@ const ItPartnerSection = () => {
 
     <div>
       <AboutUs />
-      <div className=" bg-black relative  text-white min-h-screen overflow-hidden">
+      {/* <div className=" bg-black relative  text-white min-h-screen overflow-hidden">
       
       <div
         className="absolute bg-fixed inset-0 bg-cover bg-center"
@@ -128,7 +129,8 @@ const ItPartnerSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
+    <ItPartnerSection/>
     <CardList/>
     <TestimonialsSlider/>
     <ContactSection/>
@@ -137,5 +139,5 @@ const ItPartnerSection = () => {
   );
 };
 
-export default ItPartnerSection;
+export default ItPartnerSection1;
 
