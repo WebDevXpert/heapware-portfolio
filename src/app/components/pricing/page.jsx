@@ -14,10 +14,10 @@ const Pricing = () => {
             <p className="mt-4 text-5xl font-bold text-teal-400">$39</p>
             <p className="mt-2">Per Month</p>
             <ul className="mt-4 text-gray-400 space-y-2">
-              <li>IT Consultations</li>
-              <li>Server Security</li>
-              <li>Digital IT Solutions</li>
-              <li>Customer Support</li>
+              <li>Basic IT Consulting</li>
+              <li>24/7 System Monitoring</li>
+              <li>Server Security Setup</li>
+              <li>Email Support</li>
             </ul>
             <button className="mt-6 px-4 py-2 bg-teal-400 text-gray-900 font-semibold transition duration-300 transform hover:scale-110 hover:bg-teal-500">Choose Plan</button>
           </div>
@@ -27,10 +27,10 @@ const Pricing = () => {
             <p className="mt-4 text-5xl font-bold text-teal-400">$99</p>
             <p className="mt-2">Per Month</p>
             <ul className="mt-4 text-gray-400 space-y-2">
-              <li>IT Consultations</li>
-              <li>Server Security</li>
-              <li>Digital IT Solutions</li>
-              <li>Customer Support</li>
+              <li>Advanced IT Consulting</li>
+              <li>Cloud Server Management</li>
+              <li>24/7 System Monitoring and Security</li>
+              <li>Priority Email and Phone Support</li>
             </ul>
             <button className="mt-6 px-4 py-2 bg-teal-400 text-gray-900 font-semibold transition duration-300 transform hover:scale-110 hover:bg-teal-500">Choose Plan</button>
           </div>
@@ -39,10 +39,10 @@ const Pricing = () => {
             <p className="mt-4 text-5xl font-bold text-teal-400">$69</p>
             <p className="mt-2">Per Month</p>
             <ul className="mt-4 text-gray-400 space-y-2">
-              <li>IT Consultations</li>
-              <li>Server Security</li>
-              <li>Digital IT Solutions</li>
-              <li>Customer Support</li>
+              <li>Comprehensive IT Solutions</li>
+              <li>Custom Software Development</li>
+              <li>Cloud Infrastructure Management</li>
+              <li>Dedicated 24/7 Support</li>
             </ul>
             <button className="mt-6 px-4 py-2 bg-teal-400 text-gray-900 font-semibold transition duration-300 transform hover:scale-110 hover:bg-teal-500">Choose Plan</button>
           </div>

@@ -1,5 +1,4 @@
-// components/TestimonialsSlider.js
-"use client"
+"use client";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
@@ -7,24 +6,29 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Rui Fox",
-    role: "Founder Startup",
-    content: "Curabitur viverra nulla felis. Donec ex massa, sagittis vel odio nec, pulvinar euismod metus. Praesent finibus at dolor at posuere. Curabitur ex urna, tincidunt in nulla at, blandit sodales enim. Quisque egestas ac odio quis vestibulum. Phasellus lobortis ipsum ut est convallis tristique. Ut quis aliquet sapien. Donec sollicitudin mauris a velit bibendum fermentum. Pellentesque eget suscipit ligula. Donec consectetur tincidunt lobortis. Integer a lacinia risus.",
+    name: "Arham Shehzad",
+    role: "Mobile App Development Client",
+    content: "Heapware Technologies transformed our vision into an amazing mobile app. Their team was responsive, knowledgeable, and genuinely cared about our success!",
     image: "/bg-1.jpg",
   },
   {
-    name: "Rui Fox",
-    role: "Founder Startup",
-    content: "Curabitur viverra nulla felis. Donec ex massa, sagittis vel odio nec, pulvinar euismod metus. Praesent finibus at dolor at posuere. Curabitur ex urna, tincidunt in nulla at, blandit sodales enim. Quisque egestas ac odio quis vestibulum. Phasellus lobortis ipsum ut est convallis tristique. Ut quis aliquet sapien. Donec sollicitudin mauris a velit bibendum fermentum. Pellentesque eget suscipit ligula. Donec consectetur tincidunt lobortis. Integer a lacinia risus.",
+    name: "Falak Shabbir",
+    role: "Digital Marketing Client",
+    content: "The digital marketing strategies devised by Heapware have significantly boosted our online reach and helped us connect with our audience more effectively!",
     image: "/bg-3.jpeg",
   },
   {
-    name: "Rui Fox",
-    role: "Founder Startup",
-    content: "Curabitur viverra nulla felis. Donec ex massa, sagittis vel odio nec, pulvinar euismod metus. Praesent finibus at dolor at posuere. Curabitur ex urna, tincidunt in nulla at, blandit sodales enim. Quisque egestas ac odio quis vestibulum. Phasellus lobortis ipsum ut est convallis tristique. Ut quis aliquet sapien. Donec sollicitudin mauris a velit bibendum fermentum. Pellentesque eget suscipit ligula. Donec consectetur tincidunt lobortis. Integer a lacinia risus.",
+    name: "Waleed Awan",
+    role: "Web Development Client",
+    content: "With Heapware's expertise in web development, we were able to revamp our existing website and improve user engagement dramatically. We couldn’t be happier with the result!",
     image: "/bg-2.jpg",
   },
-  // Add more testimonials here
+  {
+    name: "Daniyal Khan",
+    role: "E-commerce Client",
+    content: "Their team made our e-commerce launch a breeze! The support we received was unmatched, and the sales have exceeded our expectations.",
+    image: "/bg-2.jpg",
+  },
 ];
 
 export default function TestimonialsSlider() {
@@ -53,14 +57,14 @@ export default function TestimonialsSlider() {
 
   return (
     <div className="bg-[url('/teal-bg.jpeg')] bg-cover bg-center bg-fixed pb-14 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black "></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black "></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black"></div>
       <div className="max-w-6xl mx-auto mt-10 relative z-10 px-4 sm:px-6 lg:px-8">
-        <h2 className=" flex justify-center text-teal-500 md:text-5xl text-4xl font-bold mb-8">Testimonials</h2> 
+        <h2 className="flex justify-center text-teal-500 md:text-5xl text-4xl font-bold mb-8">Testimonials</h2> 
         <div className="bg-transparent border border-teal-500 p-6 sm:p-8 md:p-10 shadow-lg text-center relative h-full">
           <div
             className={`transition-opacity duration-500 ${
-              fade ? 'opacity-100' : 'opacity-0'
+              fade ? "opacity-100" : "opacity-0"
             }`}
           >
             <div className="flex justify-start mb-4">

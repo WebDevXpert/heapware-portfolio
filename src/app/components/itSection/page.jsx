@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 import { gsap } from "gsap";
@@ -43,7 +43,7 @@ const ITSection = () => {
   }, []);
 
   return (
-    <div id="home" className="relative flex items-center bg-fixed min-h-screen md:px-9 text-white">
+    <div id="home" className="relative flex items-center bg-fixed min-h-screen md:px-6 text-white">
       <Image
         src="/tech.jpg"
         alt="Background"
@@ -51,10 +51,9 @@ const ITSection = () => {
         objectFit="cover"
         className="absolute inset-0 w-full h-full"
       />
-      
+
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-black"></div> */}
         <div className="absolute inset-0 bg-black opacity-50" />
       </div>
 
@@ -66,17 +65,16 @@ const ITSection = () => {
           </span>
         </h1>
         <p className="anim-subheadline opacity-0 my-6 text-base sm:my-10 sm:text-lg lg:text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          quis faucibus ligula. Maecenas a purus massa.
+          Transform your ideas into reality with Heapware. From startups to large enterprises, we&apos;ve got you covered.
         </p>
         <div className="anim-btn scale-125 opacity-0 flex mt-8">
           <ScrollLink
-            to="contact" // replace with the id of the target section
+            to="contact"
             smooth={true}
             duration={500}
           >
             <div className="bg-teal-500 cursor-pointer text-white px-6 py-3 rounded hover:bg-teal-700 transition duration-300">
-              Contact Us
+              Get Free Consult
             </div>
           </ScrollLink>
         </div>

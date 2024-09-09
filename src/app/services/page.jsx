@@ -1,122 +1,85 @@
-// pages/services.js
 "use client";
 import Head from 'next/head';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import Services from "../services/services1/page";
 import Link from 'next/link';
+import Services from './services1/page'
 
 const services = [
   {
     title: "Web Development",
-    description: "We build responsive and scalable web applications tailored to your business needs.",
+    description: "Crafting high-impact websites tailored to your brand’s needs. Our team specializes in user-friendly interfaces and scalable solutions that drive engagement and enhance user experience.",
     icon: "&#127760;",
   },
   {
     title: "Mobile App Development",
-    description: "Our team creates high-quality mobile apps for both Android and iOS platforms.",
+    description: "Bringing your ideas to life with cutting-edge mobile applications. Whether you need native or cross-platform apps, our developers ensure a seamless user experience that meets your business goals.",
     icon: "&#128241;",
   },
   {
     title: "Digital Marketing",
-    description: "We help you reach your target audience through effective digital marketing strategies.",
+    description: "Elevate your brand visibility with our comprehensive digital marketing strategies. From PPC to content marketing, we ensure your message reaches the right audience effectively.",
     icon: "&#128188;",
   },
   {
     title: "UI/UX Design",
-    description: "Our designers create intuitive and engaging user interfaces and experiences.",
+    description: "Design is not just what it looks like; it’s how it works. Our UI/UX specialists create intuitive designs that keep users engaged, ensuring users have a smooth journey on your platform.",
     icon: "&#127912;",
   },
   {
     title: "SEO Services",
-    description: "Improve your website's visibility on search engines with our SEO services.",
+    description: "Enhance your online presence with our SEO expertise. We implement strategies that improve your search engine rankings and drive organic traffic to your website.",
     icon: "&#128269;",
   },
   {
     title: "Content Creation",
-    description: "We create engaging and high-quality content that resonates with your audience.",
+    description: "Engage your audience with compelling content crafted to tell your story. Our creative team produces everything from blog posts to promotional materials that resonate with your customers.",
     icon: "&#9997;&#65039;",
   },
   {
-    title: "Social Media Management",
-    description: "Our experts manage your social media accounts to increase engagement and reach.",
-    icon: "&#128227;",
-  },
-  {
-    title: "Branding",
-    description: "We help you establish a strong and consistent brand identity.",
-    icon: "&#128640;",
-  },
-  {
     title: "E-commerce Solutions",
-    description: "We build and optimize e-commerce platforms to enhance your online sales.",
+    description: "Launch your online store with our tailored e-commerce solutions. We integrate advanced features to help you sell efficiently and provide unparalleled shopping experiences for your customers.",
     icon: "&#128722;",
+  },
+  {
+    title: "Social Media Management",
+    description: "Connect with your audience better. Our social media experts craft and manage your content, ensuring brand consistency and engagement across all platforms.",
+    icon: "&#128227;",
   },
 ];
 
 export default function ServicesUs() {
-  const serviceRefs = useRef([]);
-
-  useEffect(() => {
-    serviceRefs.current.forEach((ref, index) => {
-      gsap.fromTo(ref,
-        { scale: 1 },
-        {
-          scale: 1.05,
-          paused: true,
-          reversed: true,
-          ease: 'power1.inOut',
-          duration: 0.3,
-          onReverseComplete: () => gsap.set(ref, { clearProps: 'all' })
-        });
-    });
-  }, []);
-
-  const handleMouseEnter = index => {
-    const animation = gsap.getTweensOf(serviceRefs.current[index])[0];
-    if (animation) {
-      animation.play();
-    }
-  };
-
-  const handleMouseLeave = index => {
-    const animation = gsap.getTweensOf(serviceRefs.current[index])[0];
-    if (animation) {
-      animation.reverse();
-    }
-  };
-
   return (
+    <>
     <div>
-      <Services />
+      <Services/>
+    </div>
+      <Head>
+        <title>Our IT Services - DITECH</title>
+      </Head>
+
+      <div className="bg-black py-16 px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-teal-500 mb-8">Our IT Services</h1>
+          <p className="text-lg text-gray-300">We offer a wide range of IT solutions tailored to your business needs.</p>
+        </div>
+
+        <div className="mt-16 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-black border cursor-pointer border-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+            >
+              <div className="text-6xl mb-4" dangerouslySetInnerHTML={{ __html: service.icon }}></div>
+              <h2 className="text-2xl text-teal-500 font-bold mb-2">{service.title}</h2>
+              <p className="text-gray-300">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       <main className="py-12 bg-black">
-        <section className="container mx-auto px-4 mb-12">
-          <h2 className="text-4xl font-bold text-teal-500 text-center mb-8">What We Do</h2>
-          <p className="text-center text-lg px-9 text-gray-300">Our digital agency offers a comprehensive suite of services to meet your business needs. From web development to digital marketing, we have the expertise to help you succeed.</p>
-        </section>
-
-        <section className="container mx-auto px-4 mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-black border cursor-pointer border-gray-200 p-6 rounded-lg shadow-lg transform transition-transform duration-300"
-                ref={el => serviceRefs.current[index] = el}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
-              >
-                <div className="text-6xl mb-4" dangerouslySetInnerHTML={{ __html: service.icon }}></div>
-                <h2 className="text-2xl text-teal-500 font-bold mb-2">{service.title}</h2>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section className=" relative bg-fixed bg-[url('/teal-bg.jpeg')] bg-cover bg-center py-12">
-        <div className="absolute inset-0 bg-gradient-to-t from-black" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black" />
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h2 className="text-4xl text-teal-500 font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-lg text-gray-300 mb-8">Contact us today to discuss your project and find out how we can help you achieve your business goals.</p>
@@ -142,6 +105,6 @@ export default function ServicesUs() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }

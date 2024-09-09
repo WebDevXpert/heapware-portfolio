@@ -57,20 +57,20 @@ const ItPartnerSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between min-h-screen">
           <div className="leading-relaxed anim-default-section-card opacity-0 flex flex-col px-3 md:px-3 items-center justify-center">
             <div className="text-center lg:text-left">
-              <h3 className="text-teal-400 mb-2 text-xl">Welcome to Ditech</h3>
+              <h3 className="text-teal-400 mb-2 text-xl">Welcome to Heapware</h3>
               <h2 className="text-4xl lg:text-6xl font-bold mb-4 leading-tight">
                 Let Us Be Your
                 <br />
                 <span className="text-teal-400">IT Partner</span>
               </h2>
               <p className="mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Maecenas quis faucibus ligula. Vestibulum a purus massa. Ut
-                elementum sem.
+                At Heapware, we provide comprehensive IT solutions tailored to your business needs. 
+                From cloud management to software development, our team of experts is dedicated to ensuring 
+                your systems run smoothly, securely, and efficiently.
               </p>
               <div className="mb-4 leading-10">
                 <div className="flex justify-between">
-                  <span>Workflow Management</span>
+                  <span>Workflow Automation</span>
                   <span>85%</span>
                 </div>
                 <div className="w-full bg-gray-800 rounded-full h-2.5 mb-4">
@@ -82,7 +82,7 @@ const ItPartnerSection = () => {
               </div>
               <div className="mb-4 leading-10">
                 <div className="flex justify-between">
-                  <span>IT Practice in Cloud</span>
+                  <span>Cloud Infrastructure Expertise</span>
                   <span>58%</span>
                 </div>
                 <div className="w-full bg-gray-800 rounded-full h-2.5 mb-4">
@@ -94,7 +94,7 @@ const ItPartnerSection = () => {
               </div>
               <div>
                 <div className="flex justify-between leading-10">
-                  <span>Software for Financial</span>
+                  <span>FinTech Software Solutions</span>
                   <span>75%</span>
                 </div>
                 <div className="w-full bg-gray-800 rounded-full h-2.5">

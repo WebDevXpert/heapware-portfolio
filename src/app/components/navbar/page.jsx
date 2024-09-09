@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 w-full py-5 md:px-20 px-4 transition-all duration-300 ${
+      className={`fixed z-50 w-full py-5 md:px-16 px-6 transition-all duration-300 ${
         isScrolled
           ? "bg-opacity-70 backdrop-blur-xl shadow-lg bg-[#080f0f]"
           : ""
@@ -132,7 +132,7 @@ const Navbar = () => {
           </Link>
 
           {/* Get Started Button for Mobile */}
-          <Link href="/mission" passHref>
+          <Link href="/contact" passHref>
             <div onClick={handleLinkClick} className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 rounded hover:bg-[#2DD4BF] hover:text-gray-900 transition cursor-pointer md:hidden">
               Get In Touch
             </div>
