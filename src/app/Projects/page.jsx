@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Projects from "./project1/page";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // Projects Array
 const projects = [
@@ -82,7 +84,37 @@ const projects = [
   }
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const ProjectPage = () => {
+  const [scrolling, setScrolling] = useState(0);
+  const projectRefs = useRef([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const shouldBlur = (index) => {
+    if (!projectRefs.current[index]) return false;
+
+    const card = projectRefs.current[index];
+    const cardRect = card.getBoundingClientRect();
+    const blurThreshold = 105; // Threshold from the top where blur starts
+
+    // Check if the card is scrolled past the threshold
+    return cardRect.top < blurThreshold;
+  };
+
   return (
     <div>
       <Projects />
@@ -93,11 +125,17 @@ const ProjectPage = () => {
           </h1>
 
           {/* Mapping over the projects array */}
-          <div className="space-y-12 w-11/12 md:w-10/12 lg:w-8/12">
-            {projects.map((project) => (
-              <div
+          <div className="w-11/12 md:w-10/12 lg:w-8/12">
+            {projects.map((project, index) => (
+              <motion.div
                 key={project.id}
-                className="bg-black border border-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 items-center sticky top-28"
+                ref={(el) => (projectRefs.current[index] = el)}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className={`bg-black  p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 items-center mb-12 transition-all duration-300 ${shouldBlur(index) ? 'blur-sm' : ''}`}
+                style={{ position: 'sticky', top: '90px', zIndex: 10 }} // Make sure the sticky behavior works
               >
                 {/* Left Section - Text */}
                 <div className="md:w-1/2">
@@ -126,8 +164,8 @@ const ProjectPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link target="_blank" href={project.link}>
-                    <div className="inline-block mt-6 px-6 py-2 bg-teal-400 text-gray-900 rounded-full font-bold hover:bg-teal-500">
+                  <Link href={project.link} passHref>
+                    <div target="_blank" className="inline-block mt-6 px-6 py-2 bg-teal-400 text-gray-900 rounded-full font-bold hover:bg-teal-500">
                       Visit Live Site &rarr;
                     </div>
                   </Link>
@@ -143,7 +181,7 @@ const ProjectPage = () => {
                     className="rounded-lg shadow-lg"
                   />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>

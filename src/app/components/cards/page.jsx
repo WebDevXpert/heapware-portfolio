@@ -8,6 +8,8 @@ import {
   FaServer,
   FaShieldAlt,
   FaArrowRight,
+  FaShoppingCart,
+  FaFacebook,
 } from "react-icons/fa";
 
 export default function Cards() {
@@ -30,28 +32,40 @@ export default function Cards() {
 
   const services = [
     {
-      title: "Data Center",
+      title: "Web Development",
       description:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames.",
+        "Crafting high-impact websites tailored to your brand’s needs. Our team specializes in user-friendly interfaces and scalable solutions that drive engagement and enhance user experience.",
       icon: <FaDatabase className="text-3xl text-teal-400" />,
     },
     {
-      title: "Cloud Services",
+      title: "Mobile App Development",
       description:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames.",
+        "Bringing your ideas to life with cutting-edge mobile applications. Whether you need native or cross-platform apps, our developers ensure a seamless user experience that meets your business goals.",
       icon: <FaCloud className="text-3xl text-teal-400" />,
     },
     {
-      title: "IT Management",
+      title: "Digital Marketing",
       description:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames.",
+        "Elevate your brand visibility with our comprehensive digital marketing strategies. From PPC to content marketing, we ensure your message reaches the right audience effectively.",
       icon: <FaServer className="text-3xl text-teal-400" />,
     },
     {
-      title: "Cyber Security",
+      title: "SEO Services",
       description:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames.",
+        "Enhance your online presence with our SEO expertise. We implement strategies that improve your search engine rankings and drive organic traffic to your website.",
       icon: <FaShieldAlt className="text-3xl text-teal-400" />,
+    },
+    {
+      title: "E-commerce Solutions",
+      description:
+        "Launch your online store with our tailored e-commerce solutions. We integrate advanced features to help you sell efficiently and provide unparalleled shopping experiences for your customers.",
+      icon: <FaShoppingCart className="text-3xl text-teal-400" />,
+    },
+    {
+      title: "Social Media Management",
+      description:
+        "Connect with your audience better. Our social media experts craft and manage your content, ensuring brand consistency and engagement across all platforms.",
+      icon: <FaFacebook className="text-3xl text-teal-400" />,
     },
   ];
 
@@ -63,7 +77,7 @@ export default function Cards() {
         <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
 
         <div className="relative z-10 text-center mb-8">
-          <h2 className="text-base text-teal-400 uppercase">Our Services</h2>
+          <h2 className="text-base text-teal-400 uppercase">Our Expertise</h2>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Comprehensive <span className="text-teal-400">IT Solutions</span>
           </h1>
@@ -75,11 +89,11 @@ export default function Cards() {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="cards-wrapper grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="cards-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-black border anim-card translate-y-4 opacity-0 border-white text-white p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-between transform hover:scale-105 hover:-rotate-1 transition-transform duration-300"
+                className="bg-black border anim-card opacity-0 border-white text-white p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-between transform hover:scale-105 hover:-rotate-1 transition-transform duration-300"
                 style={{ maxWidth: "24rem" }}
               >
                 <div className="mb-4">{service.icon}</div>

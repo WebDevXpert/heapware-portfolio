@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useLayoutEffect } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLayoutEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Card = ({ title, description, imageSrc, imageAlt }) => {
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to('.anim-quote', {
       opacity: 1,
       scale: 1,
@@ -16,7 +16,7 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
         start: 'top 60%',
         end: 'bottom 70%',
       },
-    })
+    });
     gsap.to('.anim-text', {
       opacity: 1,
       x: 0,
@@ -26,10 +26,10 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
         start: 'top 60%',
         end: 'bottom 70%',
       },
-    })
+    });
     gsap.to('.review-section', {
       opacity: 1,
-    })
+    });
     gsap.to('.anim-review-card', {
       opacity: 1,
       x: 0,
@@ -40,8 +40,9 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
         end: 'bottom 70%',
         scrub: true,
       },
-    })
-  }, [])
+    });
+  }, []);
+  
   return (
     <div className="review-section bg-black border-white border rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="flex anim-quote opacity-0 justify-center mb-4">
@@ -59,14 +60,14 @@ const Card = ({ title, description, imageSrc, imageAlt }) => {
 const CardList = () => {
   const cards = [
     {
-      title: "Data Base",
-      description: "Secure Database",
+      title: "Database Management",
+      description: "Robust and secure database solutions tailored to your business needs.",
       imageSrc: "/database.png",
       imageAlt: "Database Image",
     },
     {
-      title: "Performance",
-      description: "Performance Speed",
+      title: "Performance Optimization",
+      description: "Enhancing system performance for better speed and efficiency.",
       imageSrc: "/performance.png",
       imageAlt: "Performance Image",
     },
@@ -82,16 +83,15 @@ const CardList = () => {
             Our Goal is{" "}
             <span className="text-[#2DD4BF]">
               {" "}
-              <br /> Giving the Best <br />{" "}
+              <br /> Delivering Excellence <br />{" "}
             </span>
-             <span className="text-[#2DD4BF]">For IT Services.</span>
+            <span className="text-[#2DD4BF]">in IT Services.</span>
           </h2>
           <p className="text-sm text-gray-400">
-            Aliquam in tristique lorem. Quisque varius ultrices ex at
-            ullamcorper. Donec vitae lacus eu ligula tincidunt feugiat non eu
-            metus. Quisque ut ullamcorper sapien. Maecenas gravida elit vel
-            augue vulputate, non iaculis diam aliquam. Suspendisse condimentum
-            ut justo a dapibus. Mauris eleifend dolor.
+            Our team of experts is committed to providing top-notch IT solutions,
+            including database management, performance optimization, and customized
+            software development. We focus on ensuring scalability, security, and efficiency
+            to support your business growth.
           </p>
         </div>
         {/* Right Cards Section */}
