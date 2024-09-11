@@ -1,24 +1,38 @@
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaInstagram,  } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { MdPlace, MdSchedule, MdCall, MdEmail } from "react-icons/md";
 
 const Footer = () => {
+  const copyrightText = (
+    <p className="text-sm text-gray-600 text-center w-full">
+      &copy; Innovative Web Solutions, Tailored for You
+    </p>
+  );
+
   return (
     <footer className="bg-black w-full text-gray-400 pt-20 pb-5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 w-full">
+          {/* Logo and Description */}
           <div className="lg:col-span-1">
-            <div className="text-white mb-8 text-2xl font-bold">
-              <Link href="/">
-                <div className="text-2xl font-bold cursor-pointer flex items-baseline">
-                  <span className="text-teal-500 text-2xl">Heap</span>
-                  <span className="text-white text-2xl">ware</span>
-                </div>
-              </Link>
-            </div>
-            <p className="text-sm">
-              Proin velit augue, rutrum sed fringilla ac, congue id lorem. Sed feugiat sed nisl sed ultrices.
+            <Link href="/" passHref>
+              <div className="text-white mb-8 text-2xl font-bold flex items-baseline">
+                <span className="text-teal-500">Heap</span>
+                <span className="text-white">ware</span>
+              </div>
+              <div className="flex justify-center w-full md:w-auto">
+                <p className="text-sm text-gray-600 text-center w-full">
+                  Innovative Web Solutions, Tailored for You
+                </p>
+              </div>
+            </Link>
+            <p className="text-sm mt-4">
+              Proin velit augue, rutrum sed fringilla ac, congue id lorem. Sed
+              feugiat sed nisl sed ultrices.
             </p>
           </div>
+
+          {/* Company Links */}
           <div>
             <h2 className="font-semibold text-teal-500 mb-4">Company</h2>
             <ul className="space-y-2">
@@ -44,6 +58,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Solutions Links */}
           <div>
             <h2 className="font-semibold text-teal-500 mb-4">Solutions</h2>
             <ul className="space-y-2">
@@ -69,23 +85,27 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Contact Info */}
           <div>
             <h2 className="font-semibold text-teal-500 mb-4">Contact Info</h2>
             <ul className="space-y-2">
               <li className="flex items-center">
-                <span className="material-icons mr-2">place</span>99, Roving St, Big City
+                <MdPlace className="mr-2" /> 99, Roving St, Big City
               </li>
               <li className="flex items-center">
-                <span className="material-icons mr-2">schedule</span>08.00 - 17.00 Pm
+                <MdSchedule className="mr-2" /> 08.00 - 17.00 Pm
               </li>
               <li className="flex items-center">
-                <span className="material-icons mr-2">call</span>+123-1234-1234
+                <MdCall className="mr-2" /> +123-1234-1234
               </li>
               <li className="flex items-center">
-                <span className="material-icons mr-2">email</span>hello@awesomesite.com
+                <MdEmail className="mr-2" /> hello@awesomesite.com
               </li>
             </ul>
           </div>
+
+          {/* Subscribe Form */}
           <div>
             <h2 className="font-semibold text-teal-500 mb-4">Subscribe</h2>
             <form>
@@ -100,28 +120,29 @@ const Footer = () => {
             </form>
           </div>
         </div>
+
+        {/* Social Media Links and Footer */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between">
           <div className="flex space-x-4">
-            <Link href="https://www.facebook.com/heapware">
-              <div className="text-teal-400 hover:text-teal-500">
-                <FaFacebookF  className="w-6 h-6"  />
+            <Link href="https://www.facebook.com/heapware" passHref>
+              <div target="_blank" className="text-teal-400 hover:text-teal-500">
+                <FaFacebookF className="w-6 h-6" />
               </div>
             </Link>
-            <Link href="https://www.linkedin.com/company/heapware-technologies">
-              <div className="text-teal-400 hover:text-teal-500">
-                <FaLinkedinIn  className="w-6 h-6"  />
+            <Link href="https://www.linkedin.com/company/heapware-technologies" passHref>
+              <div target="_blank" className="text-teal-400 hover:text-teal-500">
+                <FaLinkedinIn className="w-6 h-6" />
               </div>
             </Link>
-            <Link href="https://www.instagram.com/heapware">
-              <div className="text-teal-400 hover:text-teal-500">
-                <FaInstagram  className="w-6 h-6"  />
+            <Link href="https://www.instagram.com/heapware" passHref>
+              <div target="_blank" className="text-teal-400 hover:text-teal-500">
+                <FaInstagram className="w-6 h-6" />
               </div>
             </Link>
           </div>
+
           <div className="flex justify-center w-full md:w-auto">
-            <p className="text-sm text-gray-600 text-center w-full">
-              &copy; Innovative Web Solutions, Tailored for You
-            </p>
+            {copyrightText}
           </div>
         </div>
       </div>
