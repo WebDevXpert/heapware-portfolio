@@ -112,7 +112,7 @@ const ItPartnerSection = () => {
               <div className="anim-default-section-card opacity-0 text-center md:mr-12 mr-12">
                 <h2 className="text-5xl md:text-6xl text-teal-400 font-bold mb-1">
                   {startCounting ? (
-                    <CountUp start={0} end={19} duration={4} suffix="+" />
+                    <CountUp start={0} end={8} duration={4} suffix="+" />
                   ) : (
                     "0+"
                   )}
@@ -122,7 +122,7 @@ const ItPartnerSection = () => {
               <div className="anim-default-section-card opacity-0 text-center">
                 <h2 className="text-5xl md:text-6xl text-teal-400 font-bold mb-1">
                   {startCounting ? (
-                    <CountUp start={0} end={152} duration={4} suffix="k" />
+                    <CountUp start={0} end={100} duration={4} suffix="k" />
                   ) : (
                     "0k"
                   )}

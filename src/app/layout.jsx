@@ -6,7 +6,7 @@ import Footer from "./components/footer/page";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Heapware | Delivering Smart Solutions",
+  title: "Heapware | Innovative Web Solutions, Tailored for You",
   description:
     "Delivering SMART Solutions: Specific, Measurable, Agile, Realistic, Timely",
 };
