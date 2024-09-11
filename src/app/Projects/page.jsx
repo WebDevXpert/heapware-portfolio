@@ -56,11 +56,11 @@ const projects = [
     id: 4,
     title: "SehatGhar",
     description:
-      "Improved analytics by 60%, Enhanced user interface, Real-time insights",
+      "Improved healthcare access and streamlined services across regions",
     benefits: [
-      "Improved analytics by 60%",
+      "Improved healthcare access",
+      "Streamlined services",
       "Enhanced user interface",
-      "Real-time insights",
     ],
     image: "/altern.png",
     link: "https://www.sehatghar.com/",
@@ -69,20 +69,81 @@ const projects = [
   },
   {
     id: 5,
-    title: "Alezay",
+    title: "Alezay Fashion",
     description:
-      "Improved analytics by 60%, Enhanced user interface, Real-time insights",
+      "Improved shopping experience and online engagement by 50%, Enhanced user interface",
     benefits: [
-      "Improved analytics by 60%",
-      "Enhanced user interface",
-      "Real-time insights",
+      "Improved shopping experience",
+      "Online engagement up by 50%",
+      "Enhanced UI",
     ],
     image: "/alezy.png",
     link: "https://www.alezay.com/",
     company: "SocialX Labs",
     year: "2021",
+  },
+  {
+    id: 6,
+    title: "ThumbTack",
+    description:
+      "Increased contractor engagement by 40%, Enhanced task management",
+    benefits: [
+      "Increased contractor engagement",
+      "Task management improved",
+      "Real-time updates",
+    ],
+    image: "/ThumbTack.png",
+    link: "https://www.thumbtack.com/",
+    company: "SocialX Labs",
+    year: "2021",
+  },
+  {
+    id: 7,
+    title: "Fly Hyer",
+    description:
+      "Boosted travel bookings by 30%, Enhanced flight search functionality",
+    benefits: [
+      "Boosted travel bookings by 30%",
+      "Improved flight search",
+      "Streamlined user journey",
+    ],
+    image: "/Hyper.png",
+    link: "https://www.flyhyer.com/",
+    company: "SocialX Labs",
+    year: "2021",
+  },
+  {
+    id: 8,
+    title: "WishTender",
+    description:
+      "Streamlined wishlists and gifting process, Increased site traffic by 20%",
+    benefits: [
+      "Streamlined wishlists",
+      "Increased traffic by 20%",
+      "Improved user experience",
+    ],
+    image: "/WishTender.png",
+    link: "https://www.wishtender.com/",
+    company: "SocialX Labs",
+    year: "2021",
+  },
+  {
+    id: 9,
+    title: "Patientory",
+    description:
+      "Improved healthcare data analytics, Streamlined patient care, Enhanced security",
+    benefits: [
+      "Improved healthcare analytics",
+      "Streamlined patient care",
+      "Enhanced data security",
+    ],
+    image: "/Patientoryinc.png",
+    link: "https://patientory.com/",
+    company: "SocialX Labs",
+    year: "2021",
   }
 ];
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -164,8 +225,8 @@ const ProjectPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link href={project.link} passHref>
-                    <div target="_blank" className="inline-block mt-6 px-6 py-2 bg-teal-400 text-gray-900 rounded-full font-bold hover:bg-teal-500">
+                  <Link href={project.link} passHref target="_blank">
+                    <div className="inline-block mt-6 px-6 py-2 bg-teal-400 text-gray-900 rounded-full font-bold hover:bg-teal-500">
                       Visit Live Site &rarr;
                     </div>
                   </Link>

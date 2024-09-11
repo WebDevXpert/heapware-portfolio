@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram,  } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -102,30 +102,25 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between">
           <div className="flex space-x-4">
-            <Link href="#">
+            <Link href="https://www.facebook.com/heapware">
               <div className="text-teal-400 hover:text-teal-500">
                 <FaFacebookF  className="w-6 h-6"  />
               </div>
             </Link>
-            <Link href="#">
-              <div className="text-teal-400 hover:text-teal-500">
-                <FaTwitter className="w-6 h-6" />
-              </div>
-            </Link>
-            <Link href="#">
+            <Link href="https://www.linkedin.com/company/heapware-technologies">
               <div className="text-teal-400 hover:text-teal-500">
                 <FaLinkedinIn  className="w-6 h-6"  />
               </div>
             </Link>
-            <Link href="#">
+            <Link href="https://www.instagram.com/heapware">
               <div className="text-teal-400 hover:text-teal-500">
-                <FaYoutube  className="w-6 h-6"  />
+                <FaInstagram  className="w-6 h-6"  />
               </div>
             </Link>
           </div>
           <div className="flex justify-center w-full md:w-auto">
             <p className="text-sm text-gray-600 text-center w-full">
-              &copy; Copyright 2022. All Rights Reserved. Rometheme
+              &copy; Innovative Web Solutions, Tailored for You
             </p>
           </div>
         </div>
