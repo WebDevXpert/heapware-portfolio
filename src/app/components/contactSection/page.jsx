@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Importing React Icons
 import { useEffect, useState, useRef } from 'react';
