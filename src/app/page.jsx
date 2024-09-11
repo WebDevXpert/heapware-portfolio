@@ -10,6 +10,7 @@ import Pricing from "./components/pricing/page";
 import ServicesSection from "./components/servicesSection/page";
 import TrustedBySection from "./components/trustedSection/page";
 import Waleed from "./components/testimonials/page";
+// import DraggableSliderTabs from "./components/slider/page";
 
 export default function Home() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <div>
       <ITSection />
+      {/* <DraggableSliderTabs/> */}
       <ItPartnerSection />
       <Cards />
       <TrustedBySection />
