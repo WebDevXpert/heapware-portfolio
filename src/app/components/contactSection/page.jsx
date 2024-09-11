@@ -9,6 +9,25 @@ const DraggableSliderTabs = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [showLeftIcon, setShowLeftIcon] = useState(false); // Show/hide left arrow
   const [showRightIcon, setShowRightIcon] = useState(true); // Show/hide right arrow
+  const [activeTab, setActiveTab] = useState(1); // Track the active tab index
+
+  const tabs = [
+    'Coding',
+    'JavaScript',
+    'Podcasts',
+    'Databases',
+    'Web Development',
+    'Unboxing',
+    'History',
+    'Programming',
+    'Gadgets',
+    'Algorithms',
+    'Comedy',
+    'Gaming',
+    'Share Market',
+    'Smartphones',
+    'Data Structure',
+  ];
 
   // Function to handle visibility of arrows based on scroll position
   const handleIcons = () => {
@@ -50,45 +69,47 @@ const DraggableSliderTabs = () => {
     };
   }, [isDragging]);
 
+  // Handle tab click to set active tab
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+
   return (
-    <div className="wrapper">
-      {showLeftIcon && (
-        <div className="icon">
-          <FaArrowLeft
-            onClick={() => handleScroll('left')} // Handle left arrow click
-            style={{ cursor: 'pointer', fontSize: '1.2rem', color: '#00bfa5' }} // Inline styles
-          />
-        </div>
-      )}
-      <ul className="tabs-box" ref={tabsBox} onMouseDown={() => setIsDragging(true)}>
-        {/* Tab items */}
-        <li className="tab">Coding</li>
-        <li className="tab active">JavaScript</li>
-        <li className="tab">Podcasts</li>
-        <li className="tab">Databases</li>
-        <li className="tab">Web Development</li>
-        <li className="tab">Unboxing</li>
-        <li className="tab">History</li>
-        <li className="tab">Programming</li>
-        <li className="tab">Gadgets</li>
-        <li className="tab">Algorithms</li>
-        <li className="tab">Comedy</li>
-        <li className="tab">Gaming</li>
-        <li className="tab">Share Market</li>
-        <li className="tab">Smartphones</li>
-        <li className="tab">Data Structure</li>
-      </ul>
-      {showRightIcon && (
-        <div className="icon">
-          <FaArrowRight
-            onClick={() => handleScroll('right')} // Handle right arrow click
-            style={{ cursor: 'pointer', fontSize: '1.2rem', color: '#00bfa5' }} // Inline styles
-          />
-        </div>
-      )}
+    <div className='slide'>
+      <div className="wrapper">
+        {showLeftIcon && (
+          <div className="icon">
+            <FaArrowLeft
+              onClick={() => handleScroll('left')} // Handle left arrow click
+              style={{ cursor: 'pointer', fontSize: '1.2rem', color: '#00bfa5' }} // Inline styles
+            />
+          </div>
+        )}
+        <ul className="tabs-box" ref={tabsBox} onMouseDown={() => setIsDragging(true)}>
+          {/* Tab items */}
+          {tabs.map((tab, index) => (
+            <li
+              key={index}
+              className={`tab ${activeTab === index ? 'active' : ''}`}
+              onClick={() => handleTabClick(index)}
+            >
+              {tab}
+            </li>
+          ))}
+        </ul>
+        {showRightIcon && (
+          <div className="icon">
+            <FaArrowRight
+              onClick={() => handleScroll('right')} // Handle right arrow click
+              style={{ cursor: 'pointer', fontSize: '1.2rem', color: '#00bfa5' }} // Inline styles
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
+
 
 // ContactSection Component
 const ContactSection = () => {
