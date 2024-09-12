@@ -5,59 +5,40 @@ import { useEffect, useState, useRef } from 'react';
 
 // DraggableSliderTabs Component
 const DraggableSliderTabs = () => {
-  const tabsBox = useRef(null); // Reference for the tabs container
+  const tabsBox = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
-  const [showLeftIcon, setShowLeftIcon] = useState(false); // Show/hide left arrow
-  const [showRightIcon, setShowRightIcon] = useState(true); // Show/hide right arrow
-  const [activeTab, setActiveTab] = useState(1); // Track the active tab index
+  const [showLeftIcon, setShowLeftIcon] = useState(false);
+  const [showRightIcon, setShowRightIcon] = useState(true);
+  const [activeTab, setActiveTab] = useState(1);
 
   const tabs = [
-    'Coding',
-    'JavaScript',
-    'Podcasts',
-    'Databases',
-    'Web Development',
-    'Unboxing',
-    'History',
-    'Programming',
-    'Gadgets',
-    'Algorithms',
-    'Comedy',
-    'Gaming',
-    'Share Market',
-    'Smartphones',
-    'Data Structure',
+    'Coding', 'JavaScript', 'Podcasts', 'Databases', 'Web Development',
+    'Unboxing', 'History', 'Programming', 'Gadgets', 'Algorithms',
+    'Comedy', 'Gaming', 'Share Market', 'Smartphones', 'Data Structure',
   ];
 
-  // Function to handle visibility of arrows based on scroll position
   const handleIcons = () => {
     const maxScrollableWidth = tabsBox.current.scrollWidth - tabsBox.current.clientWidth;
-    setShowLeftIcon(tabsBox.current.scrollLeft > 0); // Show left arrow if scrolled right
-    setShowRightIcon(tabsBox.current.scrollLeft < maxScrollableWidth); // Show right arrow if more content exists to scroll
+    setShowLeftIcon(tabsBox.current.scrollLeft > 0);
+    setShowRightIcon(tabsBox.current.scrollLeft < maxScrollableWidth);
   };
 
-  // Function to scroll tabs left or right when arrow is clicked
   const handleScroll = (direction) => {
     const scrollAmount = direction === 'left' ? -340 : 340;
-    tabsBox.current.scrollLeft += scrollAmount; // Update scrollLeft value
-    handleIcons(); // Update visibility of arrows after scrolling
+    tabsBox.current.scrollLeft += scrollAmount;
+    handleIcons();
   };
 
-  // Function to handle dragging the tabs
   const handleMouseMove = (e) => {
     if (!isDragging) return;
-    tabsBox.current.classList.add('dragging');
-    tabsBox.current.scrollLeft -= e.movementX; // Dragging scrolls tabs
-    handleIcons(); // Update visibility of arrows while dragging
+    tabsBox.current.scrollLeft -= e.movementX;
+    handleIcons();
   };
 
-  // Stop dragging
   const stopDragging = () => {
     setIsDragging(false);
-    tabsBox.current.classList.remove('dragging');
   };
 
-  // Add mouse event listeners
   useEffect(() => {
     const tabsElement = tabsBox.current;
     tabsElement.addEventListener('mousemove', handleMouseMove);
@@ -69,28 +50,31 @@ const DraggableSliderTabs = () => {
     };
   }, [isDragging]);
 
-  // Handle tab click to set active tab
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
 
   return (
-    <div className='slide'>
-      <div className="wrapper">
+    <div className="bg-black flex justify-end pr-16">
+      <div className="relative px-10 py-8 overflow-hidden w-full lg:w-1/2 flex items-center">
         {showLeftIcon && (
-          <div className="icon">
+          <div className="absolute inset-y-0 left-0 flex items-center justify-center w-20 bg-gradient-to-r from-black to-transparent">
             <FaArrowLeft
-              onClick={() => handleScroll('left')} // Handle left arrow click
-              style={{ cursor: 'pointer', fontSize: '1.2rem', color: '#00bfa5' }} // Inline styles
+              onClick={() => handleScroll('left')}
+              className="cursor-pointer text-2xl text-teal-400"
             />
           </div>
         )}
-        <ul className="tabs-box" ref={tabsBox} onMouseDown={() => setIsDragging(true)}>
-          {/* Tab items */}
+        <ul
+          ref={tabsBox}
+          className="flex gap-3 overflow-x-auto scroll-smooth w-full"
+          onMouseDown={() => setIsDragging(true)}
+        >
           {tabs.map((tab, index) => (
             <li
               key={index}
-              className={`tab ${activeTab === index ? 'active' : ''}`}
+              className={`cursor-pointer whitespace-nowrap py-3 px-5 rounded-full border ${activeTab === index ? 'bg-teal-500 text-white border-transparent' : 'border-gray-600 text-gray-300'
+                }`}
               onClick={() => handleTabClick(index)}
             >
               {tab}
@@ -98,10 +82,10 @@ const DraggableSliderTabs = () => {
           ))}
         </ul>
         {showRightIcon && (
-          <div className="icon">
+          <div className="absolute inset-y-0 right-0 flex items-center justify-center w-20 bg-gradient-to-l from-black to-transparent">
             <FaArrowRight
-              onClick={() => handleScroll('right')} // Handle right arrow click
-              style={{ cursor: 'pointer', fontSize: '1.2rem', color: '#00bfa5' }} // Inline styles
+              onClick={() => handleScroll('right')}
+              className="cursor-pointer text-2xl text-teal-400"
             />
           </div>
         )}
@@ -109,6 +93,7 @@ const DraggableSliderTabs = () => {
     </div>
   );
 };
+
 
 
 // ContactSection Component
