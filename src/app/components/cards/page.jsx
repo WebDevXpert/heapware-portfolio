@@ -72,7 +72,7 @@ export default function Cards() {
   return (
     <div id="services" className="">
       <div className="relative flex flex-col justify-center items-center md:px-20 bg-black p-8">
-        <div className="absolute inset-0 bg-[url('/teal-bg.jpeg')] bg-fixed bg-cover bg-center opacity-75"></div>
+        <div className="absolute inset-0 bg-[url('/Banner-2.jpg')] bg-fixed bg-cover bg-center opacity-75"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
 

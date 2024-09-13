@@ -45,7 +45,7 @@
     return (
       <div id="home" className="relative flex p-6  items-center bg-fixed min-h-screen w-full md:px-6  text-white">
         <Image
-          src="/tech.jpg"
+          src="/logo-com.jpg"
           alt="Background"
           layout="fill"
           objectFit="cover"
@@ -54,7 +54,7 @@
 
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
-          <div className="absolute inset-0 bg-black opacity-50" />
+          <div className="absolute inset-0 bg-black opacity-15" />
         </div>
 
         <div className="relative z-10 max-w-full p-0 md:p-8 m-auto">

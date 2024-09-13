@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
 import { gsap } from "gsap";
+import Image from "next/image";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,19 +42,23 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav 
-      className={`fixed z-50 w-full py-5 md:px-16 px-6 transition-all duration-300 ${
-        isScrolled
+    <nav
+      className={`fixed z-50 w-full py-5 md:px-16 px-6 transition-all duration-300 ${isScrolled
           ? "bg-opacity-70 backdrop-blur-xl shadow-lg bg-[#080f0f]"
           : ""
-      }`}
+        }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-2xl font-bold">
           <Link href="/" passHref>
             <div onClick={handleLinkClick} className="text-2xl font-bold cursor-pointer flex items-baseline">
-              <span className="text-teal-500 text-2xl">Heap</span>
-              <span className="text-white text-2xl">ware</span>
+              <Image
+                src="/heapware-logo.png"
+                alt="logo"
+                width={400}
+                height={50}
+                className="w-60 h-20 sm:w-56 sm:h-12 md:w-40 md:h-40 lg:w-48 lg:h-16 object-contain"
+              />
             </div>
           </Link>
         </div>

@@ -47,7 +47,7 @@ const ItPartnerSection = () => {
       <div
         className="absolute bg-fixed inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/download.jpeg')",
+          backgroundImage: "url('/Banner-1.jpg')",
         }}
       ></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black" />
