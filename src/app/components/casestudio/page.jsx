@@ -84,7 +84,7 @@ const ShowcaseSection = () => {
   return (
     <div
       className="relative py-12 bg-cover bg-center bg-fixed bg-no-repeat"
-      style={{ backgroundImage: `url('/download.jpeg')` }}
+      style={{ backgroundImage: `url('/Banner-2.jpg')` }}
       id="case-studies"
 
     >

@@ -4,7 +4,7 @@ import { MdPlace, MdSchedule, MdCall, MdEmail } from "react-icons/md";
 
 const Footer = () => {
   const copyrightText = (
-    <p className="text-sm text-gray-600 text-center w-full">
+    <p className="text-sm text-teal-300 text-center w-full">
       &copy; Innovative Web Solutions, Tailored for You
     </p>
   );
@@ -15,20 +15,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 w-full">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
-            <Link href="/" passHref>
-              <div className="text-white mb-8 text-2xl font-bold flex items-baseline">
-                <span className="text-teal-500">Heap</span>
-                <span className="text-white">ware</span>
-              </div>
-              <div className="flex justify-center w-full md:w-auto">
-                <p className="text-sm text-gray-600 text-center w-full">
-                  Innovative Web Solutions, Tailored for You
-                </p>
-              </div>
-            </Link>
+            <div className="text-white mb-8 text-2xl font-bold flex items-baseline">
+              <span className="text-teal-500">Heap</span>
+              <span className="text-white">ware</span>
+            </div>
             <p className="text-sm mt-4">
-              Proin velit augue, rutrum sed fringilla ac, congue id lorem. Sed
-              feugiat sed nisl sed ultrices.
+              Offering IT solutions from web development to cybersecurity, keeping your business ahead in the digital world.
             </p>
           </div>
 
@@ -37,24 +29,13 @@ const Footer = () => {
             <h2 className="font-semibold text-teal-500 mb-4">Company</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="#">
-                  <div className="hover:underline">About Us</div>
-                </Link>
+                <div className="hover:underline cursor-pointer">About Us</div>
               </li>
               <li>
-                <Link href="#">
-                  <div className="hover:underline">Our Team</div>
-                </Link>
+                <div className="hover:underline cursor-pointer">Our Team</div>
               </li>
               <li>
-                <Link href="#">
-                  <div className="hover:underline">Services</div>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <div className="hover:underline">Pricing</div>
-                </Link>
+                <div className="hover:underline cursor-pointer">Services</div>
               </li>
             </ul>
           </div>
@@ -64,24 +45,22 @@ const Footer = () => {
             <h2 className="font-semibold text-teal-500 mb-4">Solutions</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="#">
-                  <div className="hover:underline">IT Management</div>
-                </Link>
+                <div className="hover:underline cursor-pointer">IT Management</div>
               </li>
               <li>
-                <Link href="#">
-                  <div className="hover:underline">Cloud Services</div>
-                </Link>
+                <div className="hover:underline cursor-pointer">Cloud Services</div>
               </li>
               <li>
-                <Link href="#">
-                  <div className="hover:underline">Data Center</div>
-                </Link>
+                <div className="hover:underline cursor-pointer">Data Center</div>
               </li>
               <li>
-                <Link href="#">
-                  <div className="hover:underline">Software Development</div>
-                </Link>
+                <div className="hover:underline cursor-pointer">Software Development</div>
+              </li>
+              <li>
+                <div className="hover:underline cursor-pointer">Web Development</div>
+              </li>
+              <li>
+                <div className="hover:underline cursor-pointer">Cybersecurity</div>
               </li>
             </ul>
           </div>
@@ -90,17 +69,20 @@ const Footer = () => {
           <div>
             <h2 className="font-semibold text-teal-500 mb-4">Contact Info</h2>
             <ul className="space-y-2">
-              <li className="flex items-center">
-                <MdPlace className="mr-2" /> 99, Roving St, Big City
+              <li className="flex">
+                <MdPlace className="mr-2 text-2xl mt-1" />
+                <span>
+                  13-F1, 2nd Floor, Ghazi Rd, <br /> Block F Punjab Cooperative Housing <br /> society, Lahore, Punjab 54792
+                </span>
               </li>
               <li className="flex items-center">
-                <MdSchedule className="mr-2" /> 08.00 - 17.00 Pm
+                <MdSchedule className="mr-2" /> 10.00 - 20.00 PM
               </li>
               <li className="flex items-center">
-                <MdCall className="mr-2" /> +123-1234-1234
+                <MdCall className="mr-2" /> +92 314-4594049
               </li>
               <li className="flex items-center">
-                <MdEmail className="mr-2" /> hello@awesomesite.com
+                <MdEmail className="mr-2" /> harisali@heapware.com
               </li>
             </ul>
           </div>
@@ -124,21 +106,15 @@ const Footer = () => {
         {/* Social Media Links and Footer */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-between">
           <div className="flex space-x-4">
-            <Link href="https://www.facebook.com/heapware" passHref>
-              <div target="_blank" className="text-teal-400 hover:text-teal-500">
-                <FaFacebookF className="w-6 h-6" />
-              </div>
-            </Link>
-            <Link href="https://www.linkedin.com/company/heapware-technologies" passHref>
-              <div target="_blank" className="text-teal-400 hover:text-teal-500">
-                <FaLinkedinIn className="w-6 h-6" />
-              </div>
-            </Link>
-            <Link href="https://www.instagram.com/heapware" passHref>
-              <div target="_blank" className="text-teal-400 hover:text-teal-500">
-                <FaInstagram className="w-6 h-6" />
-              </div>
-            </Link>
+            <div className="text-teal-400 hover:text-teal-500 cursor-pointer">
+              <FaFacebookF className="w-6 h-6" />
+            </div>
+            <div className="text-teal-400 hover:text-teal-500 cursor-pointer">
+              <FaLinkedinIn className="w-6 h-6" />
+            </div>
+            <div className="text-teal-400 hover:text-teal-500 cursor-pointer">
+              <FaInstagram className="w-6 h-6" />
+            </div>
           </div>
 
           <div className="flex justify-center w-full md:w-auto">
