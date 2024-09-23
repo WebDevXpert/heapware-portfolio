@@ -29,11 +29,11 @@ export default function Team() {
         <title>Our IT Team</title>
       </Head>
       <TeamUs />
-      <div className="bg-black min-h-screen py-12">
+      <div className="bg-gray-100 min-h-screen py-12">
         <div className="container mx-auto px-6">
           <header className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-teal-500">Meet Our IT Team</h1>
-            <p className="text-gray-300 mt-4">We are a team of dedicated IT professionals, committed to ensuring seamless and secure operations.</p>
+            <h1 className="text-5xl font-bold text-teal-600">Meet Our IT Team</h1>
+            <p className="text-gray-700 mt-4">We are a team of dedicated IT professionals, committed to ensuring seamless and secure operations.</p>
           </header>
           <div className="flex flex-wrap -mx-4">
             {teamMembers.map((member, index) => (
@@ -43,7 +43,7 @@ export default function Team() {
                 onMouseEnter={() => setHoveredMember(index)}
                 onMouseLeave={() => setHoveredMember(null)}
               >
-                <div className="bg-[#0D1B1B] rounded-lg shadow-lg overflow-hidden text-center transform transition duration-500 hover:scale-105">
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden text-center transform transition duration-500 hover:scale-105">
                   <Image
                     width={400}
                     height={400}
@@ -52,10 +52,10 @@ export default function Team() {
                     className="w-32 h-32 rounded-full mx-auto mt-4 object-cover object-center transition duration-300 hover:grayscale"
                   />
                   <div className="p-6">
-                    <h2 className="text-xl text-teal-500 font-semibold mb-2">{member.name}</h2>
-                    <p className="text-gray-300 mb-4">{member.role}</p>
-                    <p className="text-gray-100">{member.bio}</p>
-                    <div className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 ${hoveredMember === index ? 'opacity-100' : 'opacity-0'}`}>
+                    <h2 className="text-xl text-teal-600 font-semibold mb-2">{member.name}</h2>
+                    <p className="text-gray-700 mb-4">{member.role}</p>
+                    <p className="text-gray-900">{member.bio}</p>
+                    <div className={`absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 transition-opacity duration-300 ${hoveredMember === index ? 'opacity-80' : 'opacity-0'}`}>
                       <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="mr-4">
                         <FaLinkedin className="text-white text-3xl hover:text-teal-500 transition-transform transform duration-300 hover:scale-125" />
                       </a>
@@ -70,11 +70,11 @@ export default function Team() {
           </div>
           <div className="mt-12">
             <h2 className="text-3xl font-bold text-center mb-6">About Our IT Team</h2>
-            <p className="text-center mb-6">
+            <p className="text-center mb-6 text-gray-700">
               Our IT team is committed to driving innovation and excellence, ensuring that all our technological needs are met with the highest standards.
             </p>
             <div className="flex justify-center">
-              <Link href={'/contact'} className="bg-teal-500 text-white px-6 py-3 rounded-lg shadow hover:bg-teal-600">
+              <Link href={'/contact'} className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:bg-teal-700">
                 Contact Us
               </Link>
             </div>

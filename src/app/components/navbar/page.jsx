@@ -6,7 +6,6 @@ import Link from "next/link";
 import { gsap } from "gsap";
 import Image from "next/image";
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,12 +43,12 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed z-50 w-full py-5 md:px-16 px-6 transition-all duration-300 ${isScrolled
-          ? "bg-opacity-70 backdrop-blur-xl shadow-lg bg-[#080f0f]"
+          ? "bg-opacity-70 backdrop-blur-xl shadow-lg bg-white"
           : ""
         }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-2xl font-bold">
+        <div className="text-black text-2xl font-bold">
           <Link href="/" passHref>
             <div onClick={handleLinkClick} className="text-2xl font-bold cursor-pointer flex items-baseline">
               <Image
@@ -65,7 +64,7 @@ const Navbar = () => {
         <div className="md:hidden flex justify-end w-full">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none z-20 relative"
+            className="text-black focus:outline-none z-20 relative"
           >
             {isOpen ? (
               <HiX
@@ -81,7 +80,7 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`fixed inset-0 bg-[#0D1B1B] bg-opacity-90 z-10 flex flex-col items-center justify-center space-y-4 text-white transform ${isOpen ? "translate-x-0 h-screen" : "translate-x-full h-0"} transition-transform duration-300 md:relative md:bg-transparent md:inset-auto md:flex md:flex-row md:space-y-0 md:space-x-4 md:translate-x-0 md:h-auto`}
+          className={`fixed inset-0 bg-white bg-opacity-90 z-10 flex flex-col items-center justify-center space-y-4 text-black transform ${isOpen ? "translate-x-0 h-screen" : "translate-x-full h-0"} transition-transform duration-300 md:relative md:bg-transparent md:inset-auto md:flex md:flex-row md:space-y-0 md:space-x-4 md:translate-x-0 md:h-auto`}
         >
           {/* Home Link */}
           <Link href="/" passHref>
@@ -114,14 +113,14 @@ const Navbar = () => {
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-          {/* Team Link*/}
+          {/* Team Link */}
           <Link href="/team" passHref>
             <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
               Team
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-          {/* Career Link*/}
+          {/* Career Link */}
           <Link href="/career" passHref>
             <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
               Career
@@ -139,7 +138,7 @@ const Navbar = () => {
 
           {/* Get Started Button for Mobile */}
           <Link href="/contact" passHref>
-            <div onClick={handleLinkClick} className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 rounded hover:bg-[#2DD4BF] hover:text-gray-900 transition cursor-pointer md:hidden">
+            <div onClick={handleLinkClick} className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 rounded hover:bg-[#2DD4BF] hover:text-white transition cursor-pointer md:hidden">
               Get In Touch
             </div>
           </Link>
@@ -147,7 +146,7 @@ const Navbar = () => {
 
         {/* Get Started Button for Desktop */}
         <Link href="/contact" passHref>
-          <div onClick={handleLinkClick} className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 hover:bg-[#2DD4BF] hover:text-gray-900 transition cursor-pointer hidden md:block">
+          <div onClick={handleLinkClick} className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 hover:bg-[#2DD4BF] hover:text-white transition cursor-pointer hidden md:block">
             Get In Touch
           </div>
         </Link>

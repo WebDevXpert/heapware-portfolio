@@ -35,53 +35,53 @@ export default function Cards() {
       title: "Web Development",
       description:
         "Crafting high-impact websites tailored to your brand’s needs. Our team specializes in user-friendly interfaces and scalable solutions that drive engagement and enhance user experience.",
-      icon: <FaDatabase className="text-3xl text-teal-400" />,
+      icon: <FaDatabase className="text-3xl text-teal-600" />,
     },
     {
       title: "Mobile App Development",
       description:
         "Bringing your ideas to life with cutting-edge mobile applications. Whether you need native or cross-platform apps, our developers ensure a seamless user experience that meets your business goals.",
-      icon: <FaCloud className="text-3xl text-teal-400" />,
+      icon: <FaCloud className="text-3xl text-teal-600" />,
     },
     {
       title: "Digital Marketing",
       description:
         "Elevate your brand visibility with our comprehensive digital marketing strategies. From PPC to content marketing, we ensure your message reaches the right audience effectively.",
-      icon: <FaServer className="text-3xl text-teal-400" />,
+      icon: <FaServer className="text-3xl text-teal-600" />,
     },
     {
       title: "SEO Services",
       description:
         "Enhance your online presence with our SEO expertise. We implement strategies that improve your search engine rankings and drive organic traffic to your website.",
-      icon: <FaShieldAlt className="text-3xl text-teal-400" />,
+      icon: <FaShieldAlt className="text-3xl text-teal-600" />,
     },
     {
       title: "E-commerce Solutions",
       description:
         "Launch your online store with our tailored e-commerce solutions. We integrate advanced features to help you sell efficiently and provide unparalleled shopping experiences for your customers.",
-      icon: <FaShoppingCart className="text-3xl text-teal-400" />,
+      icon: <FaShoppingCart className="text-3xl text-teal-600" />,
     },
     {
       title: "Social Media Management",
       description:
         "Connect with your audience better. Our social media experts craft and manage your content, ensuring brand consistency and engagement across all platforms.",
-      icon: <FaFacebook className="text-3xl text-teal-400" />,
+      icon: <FaFacebook className="text-3xl text-teal-600" />,
     },
   ];
 
   return (
-    <div id="services" className="">
-      <div className="relative flex flex-col justify-center items-center md:px-20 bg-black p-8">
-        <div className="absolute inset-0 bg-[url('/Banner-2.jpg')] bg-fixed bg-cover bg-center opacity-75"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
+    <div>
+      <div className="relative flex flex-col justify-center items-center md:px-20 bg-white p-8">
+        <div className="absolute inset-0 bg-[url('/Banner-2-light.jpg')] bg-fixed bg-cover bg-center opacity-75"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white"></div>
 
         <div className="relative z-10 text-center mb-8">
-          <h2 className="text-base text-teal-400 uppercase">Our Expertise</h2>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Comprehensive <span className="text-teal-400">IT Solutions</span>
+          <h2 className="text-base text-teal-600 uppercase">Our Expertise</h2>
+          <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            Comprehensive <span className="text-teal-600">IT Solutions</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             We offer a wide range of services to meet all your IT needs. Explore
             our comprehensive solutions designed to help your business thrive in
             the digital age.
@@ -93,13 +93,13 @@ export default function Cards() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-black border anim-card opacity-0 border-white text-white p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-between transform hover:scale-105 hover:-rotate-1 transition-transform duration-300"
+                className="bg-white border anim-card opacity-0 border-gray-300 text-black p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-between transform hover:scale-105 hover:-rotate-1 transition-transform duration-300"
                 style={{ maxWidth: "24rem" }}
               >
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-400">{service.description}</p>
-                <FaArrowRight className="mt-9 text-3xl self-end transition-transform duration-300 transform hover:translate-x-2" />
+                <p className="text-gray-600">{service.description}</p>
+                <FaArrowRight className="mt-9 text-3xl self-end transition-transform duration-300 transform hover:translate-x-2 text-teal-600" />
               </div>
             ))}
           </div>

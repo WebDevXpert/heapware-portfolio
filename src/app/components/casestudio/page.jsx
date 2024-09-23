@@ -30,7 +30,7 @@ const Card = ({ imageSrc, title, index, isCenter }) => {
         className="w-full h-full object-cover"
       />
       <div
-        className={`absolute inset-0 bg-black bg-opacity-50 ${
+        className={`absolute inset-0 bg-gray-800 bg-opacity-50 ${
           isHovered || isCenter ? "opacity-100" : "opacity-0"
         } transition-opacity duration-500`}
       >
@@ -43,7 +43,7 @@ const Card = ({ imageSrc, title, index, isCenter }) => {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className=" border rounded-full p-1 border-teal-500"
+                className="border rounded-full p-1 border-teal-500"
               >
                 <path
                   strokeLinecap="round"
@@ -55,7 +55,7 @@ const Card = ({ imageSrc, title, index, isCenter }) => {
             <h2 className="text-xl mb-5">{title}</h2>
           </div>
           <Link href="/get-started">
-            <div className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 rounded hover:bg-[#2DD4BF] hover:text-gray-900 transition cursor-pointer ">
+            <div className="text-teal-500 border-2 border-teal-500 py-2 px-4 rounded hover:bg-teal-500 hover:text-white transition cursor-pointer">
               Read More
             </div>
           </Link>
@@ -83,19 +83,18 @@ const ShowcaseSection = () => {
 
   return (
     <div
-      className="relative py-12 bg-cover bg-center bg-fixed bg-no-repeat"
-      style={{ backgroundImage: `url('/Banner-2.jpg')` }}
+      className="relative py-12 bg-white bg-cover bg-center bg-fixed bg-no-repeat"
+      // style={{ backgroundImage: `url('/Banner-2.jpg')` }}
       id="case-studies"
-
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-black " />
-      <div className="absolute inset-0 bg-gradient-to-b from-black " />
-      <div className="bg-opacity-75 relative z-10 text-center py-8 shadow-md">
-        <h2 className="text-base text-teal-400 uppercase">Case Studies</h2>
-        <h1 className="text-3xl md:text-3xl font-bold text-white">
-          Latest <span className="text-teal-400">Showcase & Solutions</span> to{" "}
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-100" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-100" /> */}
+      <div className=" relative z-10 text-center py-8 ">
+        <h2 className="text-base text-teal-500 uppercase">Case Studies</h2>
+        <h1 className="text-3xl md:text-3xl font-bold text-gray-900">
+          Latest <span className="text-teal-500">Showcase & Solutions</span> to{" "}
           <br />
-          IT <span className="text-teal-400">Solutions</span>
+          IT <span className="text-teal-500">Solutions</span>
         </h1>
       </div>
       <div className="flex justify-center my-8">
@@ -111,7 +110,6 @@ const ShowcaseSection = () => {
           ))}
         </div>
       </div>
-      
     </div>
   );
 };

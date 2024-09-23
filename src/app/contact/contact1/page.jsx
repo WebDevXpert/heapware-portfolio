@@ -1,5 +1,4 @@
-// components/AboutUs.js
-"use client"
+"use client";
 import Link from 'next/link';
 import { useLayoutEffect } from 'react';
 import gsap from 'gsap';
@@ -20,18 +19,18 @@ export default function Contact() {
           ease: "power2.out",
         });
       }, []);
+
   return (
-    <section className="relative bg-black bg-cover bg-center" >
-      <div className="absolute inset-0
-       opacity-50"></div>
+    <section className="relative bg-white bg-cover bg-center">
+      {/* <div className="absolute inset-0 opacity-80 bg-gray-200"></div> */}
       <div className="container mx-auto pt-40 relative z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold anim-headline opacity-0 text-teal-400">Contact</h1>
-        <div className="flex justify-center anim-subheadline opacity-0 space-x-2 text-white mt-4">
+        <h1 className="text-4xl md:text-6xl font-bold anim-headline opacity-0 text-teal-600">Contact</h1>
+        <div className="flex justify-center anim-subheadline opacity-0 space-x-2 text-gray-900 mt-4">
           <Link href="/">
-            <div className="hover:underline">Home</div>
+            <div className="hover:underline text-teal-600">Home</div>
           </Link>
           <span>—</span>
-          <span className="text-teal-400">Contact</span>
+          <span className="text-teal-600">Contact</span>
         </div>
       </div>
     </section>

@@ -56,12 +56,12 @@ export default function TestimonialsSlider() {
   };
 
   return (
-    <div className="bg-[url('/teal-bg.jpeg')] bg-cover bg-center bg-fixed pb-14 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black"></div>
+    <div className="bg-white  bg-cover bg-center bg-fixed pb-14 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-white"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white"></div>
       <div className="max-w-6xl mx-auto mt-10 relative z-10 px-4 sm:px-6 lg:px-8">
-        <h2 className="flex justify-center text-teal-500 md:text-5xl text-4xl font-bold mb-8">Testimonials</h2> 
-        <div className="bg-transparent border border-teal-500 p-6 sm:p-8 md:p-10 shadow-lg text-center relative h-full">
+        <h2 className="flex justify-center text-teal-600 md:text-5xl text-4xl font-bold mb-8">Testimonials</h2>
+        <div className="bg-gray-100 border border-teal-600 p-6 sm:p-8 md:p-10 shadow-lg text-center relative h-full">
           <div
             className={`transition-opacity duration-500 ${
               fade ? "opacity-100" : "opacity-0"
@@ -72,11 +72,11 @@ export default function TestimonialsSlider() {
                 <FontAwesomeIcon
                   key={index}
                   icon={faStar}
-                  className="text-teal-400 mr-1"
+                  className="text-teal-500 mr-1"
                 />
               ))}
             </div>
-            <p className="text-white text-base sm:text-lg md:text-base mb-4 text-left">
+            <p className="text-gray-900 text-base sm:text-lg md:text-base mb-4 text-left">
               &quot;{testimonials[currentIndex].content}&quot;
             </p>
             <div className="flex justify-start items-center mt-4">
@@ -89,10 +89,10 @@ export default function TestimonialsSlider() {
                 loading="lazy"
               />
               <div className="text-left ml-4">
-                <p className="text-teal-400 text-sm sm:text-base md:text-lg mb-1">
+                <p className="text-teal-600 text-sm sm:text-base md:text-lg mb-1">
                   {testimonials[currentIndex].name}
                 </p>
-                <p className="text-gray-400 text-xs sm:text-sm md:text-base">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base">
                   {testimonials[currentIndex].role}
                 </p>
               </div>
@@ -100,14 +100,14 @@ export default function TestimonialsSlider() {
           </div>
           <div className="flex justify-center items-center mt-6 gap-2">
             <button
-              className="text-white hover:text-teal-600 transition duration-300 ease-in-out"
+              className="text-gray-900 hover:text-teal-600 transition duration-300 ease-in-out"
               onClick={prevTestimonial}
               aria-label="Previous Testimonial"
             >
               <FontAwesomeIcon icon={faArrowLeft} size="1x" />
             </button>
             <button
-              className="text-white hover:text-teal-600 transition duration-300 ease-in-out"
+              className="text-gray-900 hover:text-teal-600 transition duration-300 ease-in-out"
               onClick={nextTestimonial}
               aria-label="Next Testimonial"
             >
