@@ -32,22 +32,22 @@ export default function JobCard() {
   return (
     <div>
       <Career1 />
-      <div className="flex items-center justify-center bg-black p-4 sm:p-8 md:p-12 lg:p-20">
+      <div className="flex items-center justify-center bg-white p-4 sm:p-8 md:p-12 lg:p-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {jobs.map((job, index) => (
             <div
               key={index}
-              className="w-full max-w-md h-64 p-8  border border-white bg-black rounded-lg shadow-md hover:bg-teal-900 hover:shadow-lg text-white"
+              className="w-full max-w-md h-64 p-8 border border-gray-300 bg-white rounded-lg shadow-md hover:bg-teal-300 hover:shadow-lg text-gray-800"
             >
-              <h2 className="mb-2 text-2xl font-bold tracking-tight text-white">
+              <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                 {job.title}
               </h2>
-              <p className="mb-4 font-normal text-gray-200">
+              <p className="mb-4 font-normal text-gray-600">
                 {job.description}
               </p>
               <a
                 href="#"
-                className="inline-flex items-center text-blue-300 hover:text-white font-medium"
+                className="inline-flex items-center text-blue-500 hover:text-blue-700 font-medium"
               >
                 View Jobs
                 <svg
@@ -63,7 +63,7 @@ export default function JobCard() {
                   />
                 </svg>
               </a>
-              <div className="mt-4 flex justify-between text-gray-300">
+              <div className="mt-4 flex justify-between text-gray-500">
                 <span>{job.role}</span>
                 <span>• {job.timePosted}</span>
               </div>

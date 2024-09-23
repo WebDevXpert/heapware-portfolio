@@ -144,7 +144,6 @@ const projects = [
   }
 ];
 
-
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -179,9 +178,9 @@ const ProjectPage = () => {
   return (
     <div>
       <Projects />
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-white text-gray-900">
         <section className="flex flex-col items-center justify-center py-16">
-          <h1 className="text-4xl font-semibold text-teal-400 mb-8">
+          <h1 className="text-4xl font-semibold text-teal-600 mb-8">
             Project Page
           </h1>
 
@@ -195,12 +194,12 @@ const ProjectPage = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
-                className={`bg-black  p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 items-center mb-12 transition-all duration-300 ${shouldBlur(index) ? 'blur-sm' : ''}`}
+                className={`bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 items-center mb-12 transition-all duration-300 ${shouldBlur(index) ? 'blur-sm' : ''}`}
                 style={{ position: 'sticky', top: '90px', zIndex: 10 }} // Make sure the sticky behavior works
               >
                 {/* Left Section - Text */}
                 <div className="md:w-1/2">
-                  <p className="text-teal-400 uppercase tracking-wider">
+                  <p className="text-teal-600 uppercase tracking-wider">
                     {project.company} • {project.year}
                   </p>
                   <h2 className="text-3xl font-bold mt-4">{project.title}</h2>
@@ -208,7 +207,7 @@ const ProjectPage = () => {
                     {project.benefits.map((benefit, index) => (
                       <li key={index} className="flex items-center">
                         <svg
-                          className="w-6 h-6 text-teal-400 mr-2"
+                          className="w-6 h-6 text-teal-600 mr-2"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -226,7 +225,7 @@ const ProjectPage = () => {
                     ))}
                   </ul>
                   <Link href={project.link} passHref target="_blank">
-                    <div className="inline-block mt-6 px-6 py-2 bg-teal-400 text-gray-900 rounded-full font-bold hover:bg-teal-500">
+                    <div className="inline-block mt-6 px-6 py-2 bg-teal-600 text-white rounded-full font-bold hover:bg-teal-700">
                       Visit Live Site &rarr;
                     </div>
                   </Link>

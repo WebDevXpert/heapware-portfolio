@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const TrustedBySection = () => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -19,11 +20,12 @@ const TrustedBySection = () => {
       },
     });
   }, []);
+
   return (
-    <div className=" integrations-section relative bg-cover bg-center flex flex-col justify-center md:h-[500px] bg-teal-200 bg-fixed text-white py-12">
-      <div className="absolute inset-0 bg-black opacity-45 shadow-lg"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black"></div>
+    <div className="integrations-section relative bg-cover bg-center flex flex-col justify-center md:h-[500px] bg-white bg-fixed text-black py-12">
+      <div className="absolute inset-0 bg-gray-200 opacity-80 "></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white"></div>
       <div className="relative container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -31,7 +33,7 @@ const TrustedBySection = () => {
               <Image
                 src={"/company.png"}
                 alt="Facebook"
-                className=" anim-icon opacity-0 h-auto max-w-full"
+                className="anim-icon opacity-0 h-auto max-w-full"
                 width={200}
                 height={200}
               />
@@ -40,7 +42,7 @@ const TrustedBySection = () => {
               <Image
                 src={"/max.png"}
                 alt="Instagram"
-                className=" anim-icon opacity-0 h-auto max-w-full"
+                className="anim-icon opacity-0 h-auto max-w-full"
                 width={150}
                 height={150}
               />
@@ -49,7 +51,7 @@ const TrustedBySection = () => {
               <Image
                 src={"/zylo.png"}
                 alt="Microsoft"
-                className=" anim-icon opacity-0 h-auto max-w-full"
+                className="anim-icon opacity-0 h-auto max-w-full"
                 width={150}
                 height={150}
               />
@@ -58,7 +60,7 @@ const TrustedBySection = () => {
               <Image
                 src={"/zety.png"}
                 alt="Google"
-                className=" anim-icon opacity-0 h-auto max-w-full"
+                className="anim-icon opacity-0 h-auto max-w-full"
                 width={200}
                 height={200}
               />
@@ -67,7 +69,7 @@ const TrustedBySection = () => {
               <Image
                 src={"/instagram.png"}
                 alt="Booster"
-                className=" anim-icon opacity-0 h-auto max-w-full"
+                className="anim-icon opacity-0 h-auto max-w-full"
                 width={200}
                 height={200}
               />
@@ -78,7 +80,7 @@ const TrustedBySection = () => {
                 alt="Digit"
                 width={150}
                 height={150}
-                className=" anim-icon opacity-0 h-auto max-w-full"
+                className="anim-icon opacity-0 h-auto max-w-full"
               />
             </div>
           </div>
@@ -89,7 +91,7 @@ const TrustedBySection = () => {
               World&apos;s Leading <br />
               <span className="text-[#2DD4BF]">IT Companies.</span>
             </h2>
-            <p className="text-gray-400 max-w-md mx-auto lg:mx-0 leading-6">
+            <p className="text-gray-700 max-w-md mx-auto lg:mx-0 leading-6">
               Consectetur adipiscing elit. Maecenas quis faucibus ligula.
               Maecenas a purus massa. Ut elementum sem.
             </p>
