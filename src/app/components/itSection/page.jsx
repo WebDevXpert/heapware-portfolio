@@ -41,44 +41,37 @@ const ITSection = () => {
   }, []);
 
   return (
-    <div id="home" className="relative flex p-9 items-center bg-fixed min-h-screen w-full md:px-12 text-black">
+    <div id="home" className="it-section relative">
+      {/* <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="https://youtu.be/fS4cH2fky5M?si=v3TvSnSBocnD3Quh" type="video" />
+      </video>
+      <div className="background-overlays relative z-10">
+        <div className="gradient-overlay"></div>
+        <div className="white-overlay"></div>
+      </div> */}
 
-       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-t from-white"></div> 
-        <div className="absolute inset-0 bg-white opacity-10" />
-      </div> 
-
-      <div className="relative z-10 max-w-full p-0 md:p-8 m-auto">
-        <h1 className="anim-headline opacity-0 text-3xl font-semibold sm:text-5xl lg:text-7xl leading-tight text-black">
-          Creating a Better <br className="sm:hidden" />
-          <span className="text-[#0D9488] block text-3xl sm:text-4xl lg:text-6xl">
-            IT Solutions.
-          </span>
+      {/* Content */}
+      <div className="content relative z-20 text-black">
+        <h1 className="anim-headline">
+          Creating a Better <br className="sm-hidden" />
+          <span className="highlight">IT Solutions.</span>
         </h1>
-        <p className="anim-subheadline opacity-0 my-6 text-base sm:my-10 sm:text-lg lg:text-xl text-black">
+        <p className="anim-subheadline">
           Transform your ideas into reality with Heapware. From startups to large enterprises, we&apos;ve got you covered.
         </p>
-        <div className="anim-btn scale-125 opacity-0 flex mt-8">
-          <ScrollLink
-            to="contact"
-            smooth={true}
-            duration={500}
-          >
-            <div className="bg-teal-500 cursor-pointer text-white px-6 py-3 rounded hover:bg-teal-600 transition duration-300">
+        <div className="anim-btn opacity-0 duration-500">
+          <ScrollLink to="contact" smooth={true} duration={500}>
+            <div className="btn bg-teal-500  text-white cursor-pointer px-6 py-3 rounded-lg mt-5 hover:bg-teal-600 transition duration-300">
               Get Free Consult
             </div>
           </ScrollLink>
         </div>
-      </div>
-
-      <div className="anim-cel opacity-0 relative mr-56 z-10 hidden sm:block">
-        {/* <img
-          src="/mainIconsdark.svg"
-          alt="work icons"
-          className="mt-8 sm:mt-0"
-          height={400}
-          width={400}
-        /> */}
       </div>
     </div>
   );
