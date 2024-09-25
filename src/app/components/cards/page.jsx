@@ -72,10 +72,6 @@ export default function Cards() {
   return (
     <div>
       <div className="relative flex flex-col justify-center items-center md:px-20 bg-white p-8">
-        <div className="absolute inset-0 bg-[url('/Banner-2-light.jpg')] bg-fixed bg-cover bg-center opacity-75"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white"></div>
-
         <div className="relative z-10 text-center mb-8">
           <h2 className="text-base text-teal-600 uppercase">Our Expertise</h2>
           <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
