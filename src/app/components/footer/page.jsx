@@ -11,8 +11,8 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-white w-full text-gray-600 pt-20 pb-5">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-white text-gray-600 pt-20 pb-5">
+      <div className=" w-[90%] mx-auto ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
@@ -23,7 +23,7 @@ const Footer = () => {
                   alt="logo"
                   width={400}
                   height={50}
-                  className="w-60 h-20 sm:w-56 sm:h-12 md:w-40 md:h-40 lg:w-48 lg:h-16 object-contain"
+                  className="w-60 h-20 sm:w-56 sm:h-12 md:w-40 md:h-40 lg:h-16 object-contain"
                 />
               </div>
             </Link>

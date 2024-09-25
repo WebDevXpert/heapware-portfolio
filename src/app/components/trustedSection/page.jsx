@@ -22,14 +22,11 @@ const TrustedBySection = () => {
   }, []);
 
   return (
-    <div className="integrations-section relative bg-cover bg-center flex flex-col justify-center md:h-[500px] bg-white bg-fixed text-black py-12">
-      <div className="absolute inset-0 bg-gray-200 opacity-80 "></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-white"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white"></div>
-      <div className="relative container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div className="integrations-section relative  bg-white text-black py-12">
+      <div className=" flex flex-col justify-between w-[90%] m-auto ">
+        <div className="flex flex-wrap justify-center lg:justify-between">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="flex justify-center items-center p-2">
+            <div className="flex items-center p-2">
               <Image
                 src={"/company.png"}
                 alt="Facebook"
@@ -38,7 +35,7 @@ const TrustedBySection = () => {
                 height={200}
               />
             </div>
-            <div className="flex justify-center items-center p-2">
+            <div className="flex items-center p-2">
               <Image
                 src={"/max.png"}
                 alt="Instagram"
@@ -47,7 +44,7 @@ const TrustedBySection = () => {
                 height={150}
               />
             </div>
-            <div className="flex justify-center items-center p-2">
+            <div className="flex items-center p-2">
               <Image
                 src={"/zylo.png"}
                 alt="Microsoft"
@@ -56,7 +53,7 @@ const TrustedBySection = () => {
                 height={150}
               />
             </div>
-            <div className="flex justify-center items-center p-2">
+            <div className="flex items-center p-2">
               <Image
                 src={"/zety.png"}
                 alt="Google"
@@ -65,7 +62,7 @@ const TrustedBySection = () => {
                 height={200}
               />
             </div>
-            <div className="flex justify-center items-center p-2">
+            <div className="flex items-center p-2">
               <Image
                 src={"/instagram.png"}
                 alt="Booster"
@@ -74,24 +71,26 @@ const TrustedBySection = () => {
                 height={200}
               />
             </div>
-            <div className="flex justify-center items-center p-2">
+            <div className="flex items-center p-2">
               <Image
                 src={"/microsoft.png"}
                 alt="Digit"
+                className="anim-icon opacity-0 h-auto max-w-full"
                 width={150}
                 height={150}
-                className="anim-icon opacity-0 h-auto max-w-full"
               />
             </div>
           </div>
-          <div className="text-center md:ml-2 lg:text-left">
+
+
+          <div className="text-center mt-6 lg:text-left flex justify-center flex-col  ">
             <h2 className="text-4xl md:text-5xl font-bold mb-9 leading-tight md:leading-normal">
               Trusted By <span className="text-[#2DD4BF] ">1,790+</span>
               <br />
               World&apos;s Leading <br />
               <span className="text-[#2DD4BF]">IT Companies.</span>
             </h2>
-            <p className="text-gray-700 max-w-md mx-auto lg:mx-0 leading-6">
+            <p className="text-gray-700 max-w-md  lg:mx-0 leading-6">
               Consectetur adipiscing elit. Maecenas quis faucibus ligula.
               Maecenas a purus massa. Ut elementum sem.
             </p>

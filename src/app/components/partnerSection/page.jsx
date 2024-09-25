@@ -20,17 +20,7 @@ const ItPartnerSection = () => {
   }, [inView]);
 
   return (
-    <div className="achieve-section bg-white text-black relative min-h-screen overflow-hidden">
-      {/* <div
-        className="absolute bg-fixed inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/Banner-1-light.jpg')", // Update background image if needed for light mode
-        }}
-      ></div> */}
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-white" />
-      <div className="absolute inset-0 bg-gradient-to-b from-white" /> */}
-
-      {/* <div className="relative z-10"> */}
+    <div className="achieve-section bg-white text-black relative min-h-screen ">
       <div className="w-[90%] m-auto grid grid-cols-1 lg:grid-cols-2 min-h-screen">
         <div className="leading-relaxed flex flex-col px-3 md:px-3 items-center justify-center">
           <div className="text-center lg:text-left">
@@ -84,10 +74,9 @@ const ItPartnerSection = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center lg:ml-0 lg:text-left">
+        <div className="text-center flex flex-col justify-center lg:ml-0 lg:text-left">
           <div className="flex justify-center lg:ml-36 mb-5" ref={ref}>
-            <div className="text-center md:mr-12 mr-12">
+            <div className="text-center md:mr-12  mr-12">
               <h2 className="text-5xl md:text-6xl text-teal-600 font-bold mb-1">
                 {startCounting ? (
                   <CountUp start={0} end={8} duration={4} suffix="+" />
@@ -109,19 +98,18 @@ const ItPartnerSection = () => {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-end">
             <Image
               src="/waleed.jpeg" // Update image if needed for light mode
               width={400}
               height={400}
               alt="Decorative"
-              className="sm:ml-16 md:ml-20 lg:ml-28 rounded-lg w-3/4 lg:w-4/5"
+              className="sm:ml-16 md:ml-20 lg:ml-28 rounded-lg w-3/4 lg:w-4/5 xl:w-2/3"
             />
           </div>
         </div>
       </div>
     </div>
-    // </div>
   );
 };
 

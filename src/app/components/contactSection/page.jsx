@@ -55,7 +55,7 @@ const DraggableSliderTabs = ({ onTabClick }) => {
   };
 
   return (
-    <div className="flex justify-end pr-16 bg-white"> {/* Adjusted for light mode */}
+    <div className="flex justify-end pr-20 bg-white"> 
       <div className="relative px-10 py-8 overflow-hidden w-full lg:w-1/2 flex items-center">
         {showLeftIcon && (
           <div className="absolute inset-y-0 left-0 flex items-center justify-center w-20 ">
@@ -69,7 +69,7 @@ const DraggableSliderTabs = ({ onTabClick }) => {
           ref={tabsBox}
           className="flex gap-3 overflow-x-auto scroll-smooth w-full"
           onMouseDown={() => setIsDragging(true)}
-          onTouchStart={() => setIsDragging(true)} // Added for touch devices
+          onTouchStart={() => setIsDragging(true)}
         >
           {tabs.map((tab, index) => (
             <li
@@ -116,16 +116,13 @@ const ContactSection = ({ selectedTab }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Prepare the data to be logged to the console
     const submissionData = {
       ...formData,
-      selectedTab, // Include the selected tab in the data
+      selectedTab, 
     };
 
-    // Log the data to console for testing
     console.log("Submitted Data:", submissionData);
 
-    // Reset the form fields
     setFormData({
       name: "",
       email: "",
@@ -136,11 +133,12 @@ const ContactSection = ({ selectedTab }) => {
   };
 
   return (
-    <section
+    <section className="bg-white">
+      <div
       id="contact"
-      className="bg-white text-gray-900 py-12 px-6 lg:px-24 flex flex-col lg:flex-row justify-between items-center"
+      className="bg-white text-gray-900 w-[90%] m-auto flex flex-col lg:flex-row justify-between items-center"
     >
-      <div className="lg:w-1/2 mb-6 lg:mb-0 text-center lg:text-left">
+      <div className="lg:w-1/2  text-center pr-3 lg:text-left">
         <h1 className="text-4xl lg:text-6xl font-bold mb-4">
           We Are <span className="text-teal-500">Perfect IT Solutions</span>{" "}
           <br />
@@ -224,6 +222,7 @@ const ContactSection = ({ selectedTab }) => {
           </button>
         </form>
       </div>
+    </div>
     </section>
   );
 };
