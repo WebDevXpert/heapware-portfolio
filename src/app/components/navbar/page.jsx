@@ -42,21 +42,23 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 w-full py-5 md:px-16 px-6 transition-all duration-300 ${isScrolled
-          ? "bg-opacity-70 backdrop-blur-xl shadow-lg bg-white"
-          : ""
-        }`}
+      className={`fixed z-50 w-full py-5 transition-all duration-300 ${
+        isScrolled ? "bg-opacity-70 backdrop-blur-xl shadow-lg bg-white" : ""
+      }`}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className=" flex justify-between items-center w-[90%] m-auto">
         <div className="text-black text-2xl font-bold">
           <Link href="/" passHref>
-            <div onClick={handleLinkClick} className="text-2xl font-bold cursor-pointer flex items-baseline">
+            <div
+              onClick={handleLinkClick}
+              className="text-2xl font-bold cursor-pointer flex items-baseline"
+            >
               <Image
                 src="/heapware-logo.png"
                 alt="logo"
                 width={400}
                 height={50}
-                className="w-60 h-20 sm:w-56 sm:h-12 md:w-40 md:h-40 lg:w-48 lg:h-16 object-contain"
+                className="w-60 h-20 sm:w-56 sm:h-12 md:w-40 md:h-40 lg:h-16 object-contain"
               />
             </div>
           </Link>
@@ -80,11 +82,16 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`fixed inset-0 bg-white bg-opacity-90 z-10 flex flex-col items-center justify-center space-y-4 text-black transform ${isOpen ? "translate-x-0 h-screen" : "translate-x-full h-0"} transition-transform duration-300 md:relative md:bg-transparent md:inset-auto md:flex md:flex-row md:space-y-0 md:space-x-4 md:translate-x-0 md:h-auto`}
+          className={`fixed inset-0 bg-white bg-opacity-90 z-10 flex flex-col items-center justify-center space-y-4 text-black transform ${
+            isOpen ? "translate-x-0 h-screen" : "translate-x-full h-0"
+          } transition-transform duration-300 md:relative md:bg-transparent md:inset-auto md:flex md:flex-row md:space-y-0 md:space-x-4 md:translate-x-0 md:h-auto`}
         >
           {/* Home Link */}
           <Link href="/" passHref>
-            <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
+            <div
+              onClick={handleLinkClick}
+              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
+            >
               Home
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
@@ -92,7 +99,10 @@ const Navbar = () => {
 
           {/* Projects Link */}
           <Link href="/Projects" passHref>
-            <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
+            <div
+              onClick={handleLinkClick}
+              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
+            >
               Projects
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
@@ -100,7 +110,10 @@ const Navbar = () => {
 
           {/* Services Link */}
           <Link href="/services" passHref>
-            <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
+            <div
+              onClick={handleLinkClick}
+              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
+            >
               Services
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
@@ -108,21 +121,30 @@ const Navbar = () => {
 
           {/* About Link */}
           <Link href="/about" passHref>
-            <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
+            <div
+              onClick={handleLinkClick}
+              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
+            >
               About
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
           {/* Team Link */}
           <Link href="/team" passHref>
-            <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
+            <div
+              onClick={handleLinkClick}
+              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
+            >
               Team
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
           {/* Career Link */}
           <Link href="/career" passHref>
-            <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
+            <div
+              onClick={handleLinkClick}
+              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
+            >
               Career
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
@@ -130,7 +152,10 @@ const Navbar = () => {
 
           {/* Blog Link */}
           <Link href="/blogs" passHref>
-            <div onClick={handleLinkClick} className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group">
+            <div
+              onClick={handleLinkClick}
+              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
+            >
               Blog
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
@@ -138,7 +163,10 @@ const Navbar = () => {
 
           {/* Get Started Button for Mobile */}
           <Link href="/contact" passHref>
-            <div onClick={handleLinkClick} className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 rounded hover:bg-[#2DD4BF] hover:text-white transition cursor-pointer md:hidden">
+            <div
+              onClick={handleLinkClick}
+              className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 rounded hover:bg-[#2DD4BF] hover:text-white transition cursor-pointer md:hidden"
+            >
               Get In Touch
             </div>
           </Link>
@@ -146,7 +174,10 @@ const Navbar = () => {
 
         {/* Get Started Button for Desktop */}
         <Link href="/contact" passHref>
-          <div onClick={handleLinkClick} className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 hover:bg-[#2DD4BF] hover:text-white transition cursor-pointer hidden md:block">
+          <div
+            onClick={handleLinkClick}
+            className="text-[#2DD4BF] border-2 border-[#2DD4BF] py-2 px-4 hover:bg-[#2DD4BF] hover:text-white transition cursor-pointer hidden md:block"
+          >
             Get In Touch
           </div>
         </Link>
