@@ -74,8 +74,8 @@ const CardList = () => {
   ];
 
   return (
-    <div className="flex bg-white items-center justify-center py-12 px-4">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
+    <div className="flex bg-white items-center justify-center py-12 px-2">
+      <div className=" w-[90%] mx-auto flex flex-col md:flex-row items-center">
         {/* Left Text Section */}
         <div className="md:w-1/2 mb-8 md:mb-0 md:mr-8 text-center md:text-left">
           <h1 className="text-teal-500 font-bold mb-5 ml-1">Why Choose Us?</h1>

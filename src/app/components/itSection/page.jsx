@@ -43,7 +43,7 @@ const ITSection = () => {
   return (
     <div
       id="home"
-      className="relative flex items-center bg-fixed min-h-screen w-full text-black"
+      className="relative flex items-center bg-white bg-fixed min-h-screen w-full text-black"
     >
       {/* <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-t from-white"></div>

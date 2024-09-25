@@ -70,9 +70,8 @@ export default function Cards() {
   ];
 
   return (
-    <div>
       <div className="relative flex flex-col justify-center items-center md:px-20 bg-white p-8">
-        <div className="relative z-10 text-center mb-8">
+        <div className="text-center mb-8">
           <h2 className="text-base text-teal-600 uppercase">Our Expertise</h2>
           <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Comprehensive <span className="text-teal-600">IT Solutions</span>
@@ -83,7 +82,6 @@ export default function Cards() {
             the digital age.
           </p>
         </div>
-
         <div className="max-w-6xl mx-auto">
           <div className="cards-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
@@ -101,6 +99,5 @@ export default function Cards() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

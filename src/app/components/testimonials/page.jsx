@@ -12,7 +12,7 @@ const testimonials = [
     image: "/bg-1.jpg",
   },
   {
-    name: "Falak Shabbir",
+    name: "Falak Sher",
     role: "Digital Marketing Client",
     content: "The digital marketing strategies devised by Heapware have significantly boosted our online reach and helped us connect with our audience more effectively!",
     image: "/bg-3.jpeg",
@@ -24,7 +24,7 @@ const testimonials = [
     image: "/bg-2.jpg",
   },
   {
-    name: "Daniyal Khan",
+    name: "Danyal Khan",
     role: "E-commerce Client",
     content: "Their team made our e-commerce launch a breeze! The support we received was unmatched, and the sales have exceeded our expectations.",
     image: "/bg-2.jpg",
@@ -57,9 +57,7 @@ export default function TestimonialsSlider() {
 
   return (
     <div className="bg-white  bg-cover bg-center bg-fixed pb-14 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-white"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white"></div>
-      <div className="max-w-6xl mx-auto mt-10 relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="w-[90%] m-auto mt-10 relative z-10 px-4">
         <h2 className="flex justify-center text-teal-600 md:text-5xl text-4xl font-bold mb-8">Testimonials</h2>
         <div className="bg-gray-100 border border-teal-600 p-6 sm:p-8 md:p-10 shadow-lg text-center relative h-full">
           <div
