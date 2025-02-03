@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Mission = () => {
+  const router = useRouter();
   return (
     <div className="bg-white">
       <section
@@ -13,7 +15,10 @@ const Mission = () => {
             <span className="text-teal-500">Protect</span>
             &nbsp;Your Businesses & Much More
           </h1>
-          <button className="bg-transparent text-teal-500 border-2 border-teal-500 py-2 px-4 rounded mt-4 transition transform duration-300 ease-in-out hover:bg-teal-500 hover:text-white hover:scale-105">
+          <button
+            className="bg-transparent text-teal-500 border-2 border-teal-500 py-2 px-4 rounded mt-4 transition transform duration-300 ease-in-out hover:bg-teal-500 hover:text-white hover:scale-105"
+            onClick={() => router.push("/services")}
+          >
             Discover More
           </button>
         </div>

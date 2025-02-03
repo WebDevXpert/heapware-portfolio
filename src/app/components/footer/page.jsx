@@ -37,13 +37,19 @@ const Footer = () => {
             <h2 className="font-semibold text-teal-500 mb-4">Company</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="hover:underline">About Us</Link>
+                <Link href="/about" className="hover:underline">
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/team" className="hover:underline">Our Team</Link>
+                <Link href="/team" className="hover:underline">
+                  Our Team
+                </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:underline">Services</Link>
+                <Link href="/services" className="hover:underline">
+                  Services
+                </Link>
               </li>
             </ul>
           </div>
@@ -53,22 +59,34 @@ const Footer = () => {
             <h2 className="font-semibold text-teal-500 mb-4">Solutions</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/it-management" className="hover:underline">IT Management</Link>
+                <Link href="/it-management" className="hover:underline">
+                  IT Management
+                </Link>
               </li>
               <li>
-                <Link href="/cloud-services" className="hover:underline">Cloud Services</Link>
+                <Link href="/cloud-services" className="hover:underline">
+                  Cloud Services
+                </Link>
               </li>
               <li>
-                <Link href="/data-center" className="hover:underline">Data Center</Link>
+                <Link href="/data-center" className="hover:underline">
+                  Data Center
+                </Link>
               </li>
               <li>
-                <Link href="/software-development" className="hover:underline">Software Development</Link>
+                <Link href="/software-development" className="hover:underline">
+                  Software Development
+                </Link>
               </li>
               <li>
-                <Link href="/web-development" className="hover:underline">Web Development</Link>
+                <Link href="/web-development" className="hover:underline">
+                  Web Development
+                </Link>
               </li>
               <li>
-                <Link href="/cybersecurity" className="hover:underline">Cybersecurity</Link>
+                <Link href="/cybersecurity" className="hover:underline">
+                  Cybersecurity
+                </Link>
               </li>
             </ul>
           </div>
@@ -116,13 +134,28 @@ const Footer = () => {
         {/* Social Media Links and Footer */}
         <div className="border-t border-gray-300 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-teal-500 hover:text-teal-600">
+            <a
+              href="https://www.facebook.com/heapware"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-500 hover:text-teal-600"
+            >
               <FaFacebookF className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-teal-500 hover:text-teal-600">
+            <a
+              href="https://www.linkedin.com/company/heapware-technologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-500 hover:text-teal-600"
+            >
               <FaLinkedinIn className="w-6 h-6" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-teal-500 hover:text-teal-600">
+            <a
+              href="https://www.instagram.com/heapware"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-500 hover:text-teal-600"
+            >
               <FaInstagram className="w-6 h-6" />
             </a>
           </div>

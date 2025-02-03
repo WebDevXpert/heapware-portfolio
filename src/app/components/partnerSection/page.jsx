@@ -100,10 +100,10 @@ const ItPartnerSection = () => {
 
           <div className="flex justify-end">
             <Image
-              src="/waleed.jpeg" // Update image if needed for light mode
+              src="/team-collab.jpg"
               width={400}
               height={400}
-              alt="Decorative"
+              alt="team collaboration"
               className="sm:ml-16 md:ml-20 lg:ml-28 rounded-lg w-3/4 lg:w-4/5 xl:w-2/3"
             />
           </div>

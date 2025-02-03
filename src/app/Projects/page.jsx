@@ -37,21 +37,21 @@ const projects = [
     company: "Tech Innovators",
     year: "2022",
   },
-  {
-    id: 3,
-    title: "Fidak Farms",
-    description:
-      "Improved analytics by 60%, Enhanced user interface, Real-time insights",
-    benefits: [
-      "Improved analytics by 60%",
-      "Enhanced user interface",
-      "Real-time insights",
-    ],
-    image: "/innovation.png",
-    link: "https://www.fidakfarms.com/",
-    company: "SocialX Labs",
-    year: "2021",
-  },
+  // {
+  //   id: 3,
+  //   title: "Fidak Farms",
+  //   description:
+  //     "Improved analytics by 60%, Enhanced user interface, Real-time insights",
+  //   benefits: [
+  //     "Improved analytics by 60%",
+  //     "Enhanced user interface",
+  //     "Real-time insights",
+  //   ],
+  //   image: "/innovation.png",
+  //   link: "https://www.fidakfarms.com/",
+  //   company: "SocialX Labs",
+  //   year: "2021",
+  // },
   {
     id: 4,
     title: "SehatGhar",
@@ -112,21 +112,21 @@ const projects = [
     company: "SocialX Labs",
     year: "2021",
   },
-  {
-    id: 8,
-    title: "WishTender",
-    description:
-      "Streamlined wishlists and gifting process, Increased site traffic by 20%",
-    benefits: [
-      "Streamlined wishlists",
-      "Increased traffic by 20%",
-      "Improved user experience",
-    ],
-    image: "/WishTender.png",
-    link: "https://www.wishtender.com/",
-    company: "SocialX Labs",
-    year: "2021",
-  },
+  // {
+  //   id: 8,
+  //   title: "WishTender",
+  //   description:
+  //     "Streamlined wishlists and gifting process, Increased site traffic by 20%",
+  //   benefits: [
+  //     "Streamlined wishlists",
+  //     "Increased traffic by 20%",
+  //     "Improved user experience",
+  //   ],
+  //   image: "/WishTender.png",
+  //   link: "https://www.wishtender.com/",
+  //   company: "SocialX Labs",
+  //   year: "2021",
+  // },
   {
     id: 9,
     title: "Patientory",
@@ -141,7 +141,7 @@ const projects = [
     link: "https://patientory.com/",
     company: "SocialX Labs",
     year: "2021",
-  }
+  },
 ];
 
 const fadeUp = {
@@ -180,9 +180,9 @@ const ProjectPage = () => {
       <Projects />
       <div className="min-h-screen bg-white text-gray-900">
         <section className="flex flex-col items-center justify-center py-16">
-          <h1 className="text-4xl font-semibold text-teal-600 mb-8">
+          {/* <h1 className="text-4xl font-semibold text-teal-600 mb-8">
             Project Page
-          </h1>
+          </h1> */}
 
           {/* Mapping over the projects array */}
           <div className="w-11/12 md:w-10/12 lg:w-8/12">
@@ -194,8 +194,10 @@ const ProjectPage = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
-                className={`bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 items-center mb-12 transition-all duration-300 ${shouldBlur(index) ? 'blur-sm' : ''}`}
-                style={{ position: 'sticky', top: '90px', zIndex: 10 }} // Make sure the sticky behavior works
+                className={`bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 items-center mb-12 transition-all duration-300 ${
+                  shouldBlur(index) ? "blur-sm" : ""
+                }`}
+                style={{ position: "sticky", top: "90px", zIndex: 10 }} // Make sure the sticky behavior works
               >
                 {/* Left Section - Text */}
                 <div className="md:w-1/2">

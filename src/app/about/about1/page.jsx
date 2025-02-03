@@ -1,7 +1,7 @@
 "use client";
-import Link from 'next/link';
-import { useLayoutEffect } from 'react';
-import gsap from 'gsap';
+import Link from "next/link";
+import { useLayoutEffect } from "react";
+import gsap from "gsap";
 
 export default function AboutUs() {
   useLayoutEffect(() => {
@@ -22,16 +22,10 @@ export default function AboutUs() {
 
   return (
     <section className="relative bg-white bg-cover bg-center">
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-300 opacity-70"></div> */}
       <div className="container mx-auto pt-40 relative z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold anim-headline opacity-0 text-teal-600">About Us</h1>
-        <div className="flex justify-center anim-subheadline opacity-0 space-x-2 text-gray-800 mt-4">
-          <Link href="/">
-            <div className="hover:underline text-teal-600">Home</div>
-          </Link>
-          <span>—</span>
-          <span className="text-teal-600">About Us</span>
-        </div>
+        <h1 className="text-4xl md:text-6xl font-bold anim-headline opacity-0 text-teal-600">
+          About Us
+        </h1>
       </div>
     </section>
   );

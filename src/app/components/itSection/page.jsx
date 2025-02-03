@@ -64,7 +64,7 @@ const ITSection = () => {
         <div className="anim-btn scale-125 opacity-0 flex mt-8">
           <ScrollLink to="contact" smooth={true} duration={500}>
             <div className="bg-teal-500 cursor-pointer text-white px-6 py-3 rounded hover:bg-teal-600 transition duration-300">
-              Get Free Consult
+              Get a free consultant call
             </div>
           </ScrollLink>
         </div>

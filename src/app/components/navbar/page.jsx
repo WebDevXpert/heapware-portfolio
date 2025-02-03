@@ -130,7 +130,7 @@ const Navbar = () => {
             </div>
           </Link>
           {/* Team Link */}
-          <Link href="/team" passHref>
+          {/* <Link href="/team" passHref>
             <div
               onClick={handleLinkClick}
               className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
@@ -138,7 +138,7 @@ const Navbar = () => {
               Team
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
-          </Link>
+          </Link> */}
           {/* Career Link */}
           <Link href="/career" passHref>
             <div

@@ -2,7 +2,7 @@
 import Cards from "./components/cards/page";
 import CaseStudio from "./components/casestudio/page";
 import ContactSection from "./components/contactSection/page";
-import ITSection from "./components/itSection/page"
+import ITSection from "./components/itSection/page";
 import Mission from "./components/mission/page";
 import ItPartnerSection from "./components/partnerSection/page";
 import Pricing from "./components/pricing/page";
@@ -22,7 +22,7 @@ export default function Home() {
       <CaseStudio />
       <Mission />
       <ContactSection />
-      <Pricing />
+      {/* <Pricing /> */}
       <Waleed />
     </div>
   );
