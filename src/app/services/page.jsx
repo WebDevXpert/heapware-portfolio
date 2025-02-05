@@ -65,19 +65,10 @@ export default function ServicesUs() {
       </Head>
 
       <div className="bg-white py-16 px-8">
-        {/* <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-teal-600 mb-8">
-            Our IT Services
-          </h1>
-          <p className="text-lg text-gray-700">
-            We offer a wide range of IT solutions tailored to your business
-            needs.
-          </p>
-        </div> */}
-
         <div className="mt-16 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div
+            <Link
+              href="/services/web-development"
               key={index}
               className="bg-white border border-gray-300 cursor-pointer p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
             >
@@ -89,7 +80,7 @@ export default function ServicesUs() {
                 {service.title}
               </h2>
               <p className="text-gray-700">{service.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

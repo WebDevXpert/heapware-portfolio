@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
-import { gsap } from "gsap";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -86,7 +85,6 @@ const Navbar = () => {
             isOpen ? "translate-x-0 h-screen" : "translate-x-full h-0"
           } transition-transform duration-300 md:relative md:bg-transparent md:inset-auto md:flex md:flex-row md:space-y-0 md:space-x-4 md:translate-x-0 md:h-auto`}
         >
-          {/* Home Link */}
           <Link href="/" passHref>
             <div
               onClick={handleLinkClick}
@@ -96,8 +94,6 @@ const Navbar = () => {
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-
-          {/* Projects Link */}
           <Link href="/Projects" passHref>
             <div
               onClick={handleLinkClick}
@@ -107,8 +103,6 @@ const Navbar = () => {
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-
-          {/* Services Link */}
           <Link href="/services" passHref>
             <div
               onClick={handleLinkClick}
@@ -118,8 +112,6 @@ const Navbar = () => {
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-
-          {/* About Link */}
           <Link href="/about" passHref>
             <div
               onClick={handleLinkClick}
@@ -129,17 +121,6 @@ const Navbar = () => {
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-          {/* Team Link */}
-          {/* <Link href="/team" passHref>
-            <div
-              onClick={handleLinkClick}
-              className="hover:text-[#2DD4BF] cursor-pointer pb-1 relative group"
-            >
-              Team
-              <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
-            </div>
-          </Link> */}
-          {/* Career Link */}
           <Link href="/career" passHref>
             <div
               onClick={handleLinkClick}
@@ -149,8 +130,6 @@ const Navbar = () => {
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-
-          {/* Blog Link */}
           <Link href="/blogs" passHref>
             <div
               onClick={handleLinkClick}
@@ -160,8 +139,6 @@ const Navbar = () => {
               <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-0.5 w-0 bg-[#2DD4BF] transition-all duration-500 group-hover:w-full mt-2"></span>
             </div>
           </Link>
-
-          {/* Get Started Button for Mobile */}
           <Link href="/contact" passHref>
             <div
               onClick={handleLinkClick}
@@ -171,8 +148,6 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-
-        {/* Get Started Button for Desktop */}
         <Link href="/contact" passHref>
           <div
             onClick={handleLinkClick}
