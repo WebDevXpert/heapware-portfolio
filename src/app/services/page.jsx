@@ -9,49 +9,55 @@ const services = [
     description:
       "Crafting high-impact websites tailored to your brand’s needs. Our team specializes in user-friendly interfaces and scalable solutions that drive engagement and enhance user experience.",
     icon: "&#127760;",
+    href: "web-development",
   },
   {
     title: "Mobile App Development",
     description:
       "Bringing your ideas to life with cutting-edge mobile applications. Whether you need native or cross-platform apps, our developers ensure a seamless user experience that meets your business goals.",
     icon: "&#128241;",
+    href: "app-development",
   },
   {
-    title: "Digital Marketing",
+    title: "SAAS Development",
     description:
       "Elevate your brand visibility with our comprehensive digital marketing strategies. From PPC to content marketing, we ensure your message reaches the right audience effectively.",
     icon: "&#128188;",
+    href: "saas-development",
   },
   {
-    title: "UI/UX Design",
+    title: "ERP Development",
     description:
-      "Design is not just what it looks like; it’s how it works. Our UI/UX specialists create intuitive designs that keep users engaged, ensuring users have a smooth journey on your platform.",
-    icon: "&#127912;",
+      "Enhance your online presence with our SEO expertise. We implement strategies that improve your search engine rankings and drive organic traffic to your website.",
+    icon: "&#128269;",
+    href: "erp-development",
   },
   {
     title: "SEO Services",
     description:
-      "Enhance your online presence with our SEO expertise. We implement strategies that improve your search engine rankings and drive organic traffic to your website.",
-    icon: "&#128269;",
+      "Design is not just what it looks like; it’s how it works. Our UI/UX specialists create intuitive designs that keep users engaged, ensuring users have a smooth journey on your platform.",
+    icon: "&#127912;",
+    href: "seo-services",
   },
   {
-    title: "Content Creation",
+    title: "Digital Marketing",
     description:
       "Engage your audience with compelling content crafted to tell your story. Our creative team produces everything from blog posts to promotional materials that resonate with your customers.",
     icon: "&#9997;&#65039;",
+    href: "digital-marketing",
   },
-  {
-    title: "E-commerce Solutions",
-    description:
-      "Launch your online store with our tailored e-commerce solutions. We integrate advanced features to help you sell efficiently and provide unparalleled shopping experiences for your customers.",
-    icon: "&#128722;",
-  },
-  {
-    title: "Social Media Management",
-    description:
-      "Connect with your audience better. Our social media experts craft and manage your content, ensuring brand consistency and engagement across all platforms.",
-    icon: "&#128227;",
-  },
+  // {
+  //   title: "E-commerce Solutions",
+  //   description:
+  //     "Launch your online store with our tailored e-commerce solutions. We integrate advanced features to help you sell efficiently and provide unparalleled shopping experiences for your customers.",
+  //   icon: "&#128722;",
+  // },
+  // {
+  //   title: "Social Media Management",
+  //   description:
+  //     "Connect with your audience better. Our social media experts craft and manage your content, ensuring brand consistency and engagement across all platforms.",
+  //   icon: "&#128227;",
+  // },
 ];
 
 export default function ServicesUs() {
@@ -68,7 +74,7 @@ export default function ServicesUs() {
         <div className="mt-16 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Link
-              href="/services/web-development"
+              href={`/services/${service.href}`}
               key={index}
               className="bg-white border border-gray-300 cursor-pointer p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
             >

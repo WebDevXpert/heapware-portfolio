@@ -5,7 +5,7 @@ import ContactSection from "./components/contactSection/page";
 import ITSection from "./components/itSection/page";
 import Mission from "./components/mission/page";
 import ItPartnerSection from "./components/partnerSection/page";
-import Pricing from "./components/pricing/page";
+// import Pricing from "./components/pricing/page";
 import ServicesSection from "./components/servicesSection/page";
 import TrustedBySection from "./components/trustedSection/page";
 import Waleed from "./components/testimonials/page";

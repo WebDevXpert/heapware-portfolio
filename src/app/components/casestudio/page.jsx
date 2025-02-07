@@ -54,11 +54,11 @@ const Card = ({ imageSrc, title, index, isCenter }) => {
             </div>
             <h2 className="text-xl mb-5">{title}</h2>
           </div>
-          <Link href="/get-started">
+          {/* <Link href="/get-started">
             <div className="text-teal-500 border-2 border-teal-500 py-2 px-4 rounded hover:bg-teal-500 hover:text-white transition cursor-pointer">
               Read More
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

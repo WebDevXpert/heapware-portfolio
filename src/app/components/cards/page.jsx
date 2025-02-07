@@ -11,6 +11,7 @@ import {
   FaShoppingCart,
   FaFacebook,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Cards() {
   useLayoutEffect(() => {
@@ -36,68 +37,76 @@ export default function Cards() {
       description:
         "Crafting high-impact websites tailored to your brand’s needs. Our team specializes in user-friendly interfaces and scalable solutions that drive engagement and enhance user experience.",
       icon: <FaDatabase className="text-3xl text-teal-600" />,
+      href: "web-development",
     },
     {
       title: "Mobile App Development",
       description:
         "Bringing your ideas to life with cutting-edge mobile applications. Whether you need native or cross-platform apps, our developers ensure a seamless user experience that meets your business goals.",
       icon: <FaCloud className="text-3xl text-teal-600" />,
+      href: "app-development",
     },
     {
-      title: "Digital Marketing",
+      title: "SAAS Development",
       description:
         "Elevate your brand visibility with our comprehensive digital marketing strategies. From PPC to content marketing, we ensure your message reaches the right audience effectively.",
       icon: <FaServer className="text-3xl text-teal-600" />,
+      href: "saas-development",
+    },
+    {
+      title: "ERP System Development",
+      description:
+        "Enhance your online presence with our SEO expertise. We implement strategies that improve your search engine rankings and drive organic traffic to your website.",
+      icon: <FaShieldAlt className="text-3xl text-teal-600" />,
+      href: "erp-development",
     },
     {
       title: "SEO Services",
       description:
-        "Enhance your online presence with our SEO expertise. We implement strategies that improve your search engine rankings and drive organic traffic to your website.",
-      icon: <FaShieldAlt className="text-3xl text-teal-600" />,
-    },
-    {
-      title: "E-commerce Solutions",
-      description:
         "Launch your online store with our tailored e-commerce solutions. We integrate advanced features to help you sell efficiently and provide unparalleled shopping experiences for your customers.",
       icon: <FaShoppingCart className="text-3xl text-teal-600" />,
+      href: "seo-services",
     },
     {
-      title: "Social Media Management",
+      title: "Digital Marketing",
       description:
         "Connect with your audience better. Our social media experts craft and manage your content, ensuring brand consistency and engagement across all platforms.",
       icon: <FaFacebook className="text-3xl text-teal-600" />,
+      href: "digital-marketing",
     },
   ];
 
   return (
-      <div className="relative flex flex-col justify-center items-center md:px-20 bg-white p-8">
-        <div className="text-center mb-8">
-          <h2 className="text-base text-teal-600 uppercase">Our Expertise</h2>
-          <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            Comprehensive <span className="text-teal-600">IT Solutions</span>
-          </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We offer a wide range of services to meet all your IT needs. Explore
-            our comprehensive solutions designed to help your business thrive in
-            the digital age.
-          </p>
-        </div>
-        <div className="max-w-6xl mx-auto">
-          <div className="cards-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white border anim-card opacity-0 border-gray-300 text-black p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-between transform hover:scale-105 hover:-rotate-1 transition-transform duration-300"
-                style={{ maxWidth: "24rem" }}
-              >
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-                <FaArrowRight className="mt-9 text-3xl self-end transition-transform duration-300 transform hover:translate-x-2 text-teal-600" />
-              </div>
-            ))}
-          </div>
+    <div className="relative flex flex-col justify-center items-center md:px-20 bg-white p-8">
+      <div className="text-center mb-8">
+        <h2 className="text-base text-teal-600 uppercase">Our Expertise</h2>
+        <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          Comprehensive <span className="text-teal-600">IT Solutions</span>
+        </h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          We offer a wide range of services to meet all your IT needs. Explore
+          our comprehensive solutions designed to help your business thrive in
+          the digital age.
+        </p>
+      </div>
+      <div className="max-w-6xl mx-auto">
+        <div className="cards-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white border anim-card opacity-0 border-gray-300 text-black p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-between transform hover:scale-105 hover:-rotate-1 transition-transform duration-300"
+              style={{ maxWidth: "24rem" }}
+            >
+              <div className="mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+              <Link href={`/services/${service.href}`} className="self-end">
+                <FaArrowRight className="mt-9 text-3xl transition-transform duration-300 transform hover:translate-x-2 text-teal-600" />
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
+    </div>
   );
 }

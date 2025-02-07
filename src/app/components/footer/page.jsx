@@ -42,8 +42,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="hover:underline">
-                  Our Team
+                <Link href="/Projects" className="hover:underline">
+                  Projects
                 </Link>
               </li>
               <li>
@@ -59,33 +59,48 @@ const Footer = () => {
             <h2 className="font-semibold text-teal-500 mb-4">Solutions</h2>
             <ul className="space-y-2">
               <li>
-                <Link href="/it-management" className="hover:underline">
-                  IT Management
+                <Link
+                  href="/services/web-development"
+                  className="hover:underline"
+                >
+                  Website Development
                 </Link>
               </li>
               <li>
-                <Link href="/cloud-services" className="hover:underline">
-                  Cloud Services
+                <Link
+                  href="/services/app-development"
+                  className="hover:underline"
+                >
+                  Mobile App Development
                 </Link>
               </li>
               <li>
-                <Link href="/data-center" className="hover:underline">
-                  Data Center
+                <Link
+                  href="/services/saas-development"
+                  className="hover:underline"
+                >
+                  SAAS Development
                 </Link>
               </li>
               <li>
-                <Link href="/software-development" className="hover:underline">
-                  Software Development
+                <Link
+                  href="/services/erp-development"
+                  className="hover:underline"
+                >
+                  ERP System Development
                 </Link>
               </li>
               <li>
-                <Link href="/web-development" className="hover:underline">
-                  Web Development
+                <Link href="/services/seo-services" className="hover:underline">
+                  SEO Services
                 </Link>
               </li>
               <li>
-                <Link href="/cybersecurity" className="hover:underline">
-                  Cybersecurity
+                <Link
+                  href="/services/digital-marketing"
+                  className="hover:underline"
+                >
+                  Digital Marketing
                 </Link>
               </li>
             </ul>

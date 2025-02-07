@@ -60,8 +60,8 @@ export default function WebDevelopment() {
       <section className="flex flex-col md:flex-row items-center justify-between px-10 py-32 bg-white">
         <div className="md:w-1/2 space-y-5 max-w-xl">
           <h1 className="text-5xl md:text-6xl font-bold text-black leading-tight">
-            Website <br />
-            <span className="text-teal-500">Development Services</span>
+            Digital <br />
+            <span className="text-teal-500">Marketing Services</span>
           </h1>
           <p className="text-gray-600 text-lg">
             Enhance your digital presence with our advanced web development
