@@ -11,19 +11,20 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-white text-gray-600 pt-20 pb-5">
+    <footer className="bg-slate-50 text-gray-600 pt-20 pb-5 border-t border-blue-100">
       <div className=" w-[90%] mx-auto ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <Link href="/" passHref>
-              <div className="text-2xl font-bold cursor-pointer flex items-baseline">
+              <div className="cursor-pointer flex items-center">
                 <Image
-                  src="/heapware-logo.png"
-                  alt="logo"
+                  src="/new-heap-logo.png"
+                  alt="Heapware logo"
                   width={400}
-                  height={50}
-                  className="w-60 h-20 sm:w-56 sm:h-12 md:w-40 md:h-40 lg:h-16 object-contain"
+                  height={80}
+                  priority
+                  className="w-56 h-auto object-contain"
                 />
               </div>
             </Link>
@@ -147,7 +148,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media Links and Footer */}
-        <div className="border-t border-gray-300 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
+        <div className="border-t border-blue-100 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a
               href="https://www.facebook.com/heapware"

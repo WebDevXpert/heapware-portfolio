@@ -85,10 +85,10 @@ const TrustedBySection = () => {
 
           <div className="text-center mt-6 lg:text-left flex justify-center flex-col  ">
             <h2 className="text-4xl md:text-5xl font-bold mb-9 leading-tight md:leading-normal">
-              Trusted By <span className="text-[#2DD4BF] ">1,790+</span>
+              Trusted By <span className="text-blue-600 ">1,790+</span>
               <br />
               World&apos;s Leading <br />
-              <span className="text-[#2DD4BF]">IT Companies.</span>
+              <span className="text-blue-600">IT Companies.</span>
             </h2>
             <p className="text-gray-700 max-w-md  lg:mx-0 leading-6">
               Consectetur adipiscing elit. Maecenas quis faucibus ligula.

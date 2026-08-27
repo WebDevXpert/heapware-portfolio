@@ -1,32 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-html{
-  scroll-behavior: smooth;
+  --foreground-rgb: 10, 15, 25;
+  --background-rgb: 255, 255, 255;
+  --brand-blue: #2563eb;
+  --brand-blue-dark: #1d4ed8;
+  --brand-blue-light: #eff6ff;
+  --brand-navy: #0b1220;
+  --brand-border: #dbeafe;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
+  background: #ffffff;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    overflow-x: hidden;
+  background: rgb(var(--background-rgb));
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--brand-blue);
+  color: #ffffff;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfdbfe;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
 }
 
 @layer utilities {
@@ -34,14 +73,10 @@ body {
     text-wrap: balance;
   }
 }
+
 .group-hover\:w-full:hover .group-hover\:w-full {
   width: 100%;
 }
-
-::-webkit-scrollbar{
-  display: none;
-}
-
 
 /* Global styles for ITSection */
 .it-section {
@@ -90,7 +125,7 @@ body {
 }
 
 .content h1 .highlight {
-  color: #0D9488;
+  color: #2563EB;
   font-size: 1.5rem;
   display: block;
 }
@@ -176,4 +211,3 @@ body {
 .btn{
   width: 200px;
 }
-
