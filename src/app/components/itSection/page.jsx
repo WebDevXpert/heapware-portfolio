@@ -53,7 +53,7 @@ const ITSection = () => {
       <div className="w-[90%] m-auto">
         <h1 className="anim-headline opacity-0 text-3xl font-semibold sm:text-5xl lg:text-7xl leading-tight text-black">
           Creating a Better <br className="sm:hidden" />
-          <span className="text-[#0D9488] block text-3xl sm:text-4xl lg:text-6xl">
+          <span className="text-blue-600 block text-3xl sm:text-4xl lg:text-6xl">
             IT Solutions.
           </span>
         </h1>

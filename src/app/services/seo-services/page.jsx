@@ -132,7 +132,7 @@ export default function WebDevelopment() {
       </section>
       <section className="bg-gray-50 py-16 px-6 md:px-20 text-center">
         {/* Section Title */}
-        <h3 className="text-lg text-indigo-600 font-semibold">
+        <h3 className="text-lg text-blue-600 font-semibold">
           Why You Choose Us
         </h3>
         <h2 className="text-4xl font-bold text-gray-900 mt-2">
@@ -200,7 +200,7 @@ export default function WebDevelopment() {
           <h1 className="text-4xl md:text-5xl font-bold">
             Share Your Idea <br />
             With Us Today And <br />
-            <span className="text-yellow-400">GO PREMIUM</span> with A <br />
+            <span className="text-white">GO PREMIUM</span> with A <br />
             Featured-packed Web Development Services
           </h1>
 
@@ -232,7 +232,7 @@ export default function WebDevelopment() {
       </section>
       <div className="flex flex-col items-center w-full max-w-7xl mx-auto px-6 py-16">
         {/* Title Section */}
-        <h2 className="text-lg font-semibold text-center text-indigo-600">
+        <h2 className="text-lg font-semibold text-center text-blue-600">
           Development Process
         </h2>
         <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mt-2">
@@ -255,7 +255,7 @@ export default function WebDevelopment() {
                                       ${
                                         activeStep === index
                                           ? "bg-teal-700 text-white shadow-lg"
-                                          : "bg-gray-100 text-gray-700 border-transparent hover:bg-indigo-50"
+                                          : "bg-gray-100 text-gray-700 border-transparent hover:bg-blue-50"
                                       }`}
               >
                 <Image
@@ -355,7 +355,7 @@ export default function WebDevelopment() {
         </div>
       </section>
       <section className="py-10 bg-white text-center">
-        <h5 className="text-purple-600 font-semibold text-lg">
+        <h5 className="text-blue-600 font-semibold text-lg">
           Web Development Platforms
         </h5>
         <h1 className="text-4xl font-bold text-gray-900 mt-2">
@@ -379,7 +379,7 @@ export default function WebDevelopment() {
         </div>
       </section>
       <section className="py-16 bg-white text-center">
-        <h5 className="text-purple-600 font-semibold text-base">
+        <h5 className="text-blue-600 font-semibold text-base">
           Frequently Ask Questions
         </h5>
         <h1 className="text-3xl font-bold text-gray-900 mt-3 leading-snug">
@@ -407,7 +407,7 @@ export default function WebDevelopment() {
         </div>
       </section>
       <section className="py-16 bg-gray-50 text-center px-4">
-        <h5 className="text-purple-600 font-semibold text-lg">
+        <h5 className="text-blue-600 font-semibold text-lg">
           Let Us Know What You’re Looking for, We’ll Build it for You
         </h5>
         <h1 className="text-4xl font-bold text-gray-900 mt-3">
@@ -429,7 +429,7 @@ export default function WebDevelopment() {
                   key={service}
                   className={`px-4 py-2 border rounded-lg ${
                     formData.services.includes(service)
-                      ? "bg-purple-600 text-white"
+                      ? "bg-blue-600 text-white"
                       : "bg-gray-100 text-gray-700"
                   }`}
                   onClick={() => handleServiceClick(service)}
