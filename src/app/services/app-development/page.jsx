@@ -52,7 +52,7 @@ export default function WebDevelopment() {
     setOpenIndices((prevIndices) =>
       prevIndices.includes(index)
         ? prevIndices.filter((i) => i !== index)
-        : [...prevIndices, index]
+        : [...prevIndices, index],
     );
   };
   return (
@@ -80,7 +80,7 @@ export default function WebDevelopment() {
         <div className="md:w-1/2 flex justify-center relative">
           <div className="relative w-[400px] h-[300px]">
             <img
-              src="https://codeupscale.com/_next/static/media/webimg1.aeaea2dd.png"
+              src="https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1506&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Web Development"
               className="w-full h-auto rounded-xl"
             />

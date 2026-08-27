@@ -1,14 +1,15 @@
 "use client";
+
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Projects from "./project1/page";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Projects Array
 const projects = [
   {
     id: 1,
+    slug: "autoupscale",
     title: "Autoupscale",
     description:
       "Enhanced user experience by 40%, Improved site speed by 50%, Increased mobile traffic by 35%",
@@ -24,6 +25,7 @@ const projects = [
   },
   {
     id: 2,
+    slug: "code-upscale",
     title: "Code Upscale",
     description:
       "Boosted conversion rates by 25%, Reduced cart abandonment by 15%, Enhanced mobile shopping experience",
@@ -37,23 +39,9 @@ const projects = [
     company: "Tech Innovators",
     year: "2022",
   },
-  // {
-  //   id: 3,
-  //   title: "Fidak Farms",
-  //   description:
-  //     "Improved analytics by 60%, Enhanced user interface, Real-time insights",
-  //   benefits: [
-  //     "Improved analytics by 60%",
-  //     "Enhanced user interface",
-  //     "Real-time insights",
-  //   ],
-  //   image: "/innovation.png",
-  //   link: "https://www.fidakfarms.com/",
-  //   company: "SocialX Labs",
-  //   year: "2021",
-  // },
   {
     id: 4,
+    slug: "sehatghar",
     title: "SehatGhar",
     description:
       "Improved healthcare access and streamlined services across regions",
@@ -69,6 +57,7 @@ const projects = [
   },
   {
     id: 5,
+    slug: "alezay-fashion",
     title: "Alezay Fashion",
     description:
       "Improved shopping experience and online engagement by 50%, Enhanced user interface",
@@ -84,6 +73,7 @@ const projects = [
   },
   {
     id: 6,
+    slug: "thumbtack",
     title: "ThumbTack",
     description:
       "Increased contractor engagement by 40%, Enhanced task management",
@@ -99,6 +89,7 @@ const projects = [
   },
   {
     id: 7,
+    slug: "fly-hyer",
     title: "Fly Hyer",
     description:
       "Boosted travel bookings by 30%, Enhanced flight search functionality",
@@ -112,23 +103,9 @@ const projects = [
     company: "SocialX Labs",
     year: "2021",
   },
-  // {
-  //   id: 8,
-  //   title: "WishTender",
-  //   description:
-  //     "Streamlined wishlists and gifting process, Increased site traffic by 20%",
-  //   benefits: [
-  //     "Streamlined wishlists",
-  //     "Increased traffic by 20%",
-  //     "Improved user experience",
-  //   ],
-  //   image: "/WishTender.png",
-  //   link: "https://www.wishtender.com/",
-  //   company: "SocialX Labs",
-  //   year: "2021",
-  // },
   {
     id: 9,
+    slug: "patientory",
     title: "Patientory",
     description:
       "Improved healthcare data analytics, Streamlined patient care, Enhanced security",
@@ -146,7 +123,11 @@ const projects = [
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
 };
 
 const ProjectPage = () => {
@@ -159,6 +140,7 @@ const ProjectPage = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -169,22 +151,17 @@ const ProjectPage = () => {
 
     const card = projectRefs.current[index];
     const cardRect = card.getBoundingClientRect();
-    const blurThreshold = 105; // Threshold from the top where blur starts
+    const blurThreshold = 105;
 
-    // Check if the card is scrolled past the threshold
     return cardRect.top < blurThreshold;
   };
 
   return (
     <div>
       <Projects />
+
       <div className="min-h-screen bg-white text-gray-900">
         <section className="flex flex-col items-center justify-center py-16">
-          {/* <h1 className="text-4xl font-semibold text-teal-600 mb-8">
-            Project Page
-          </h1> */}
-
-          {/* Mapping over the projects array */}
           <div className="w-11/12 md:w-10/12 lg:w-8/12">
             {projects.map((project, index) => (
               <motion.div
@@ -197,19 +174,25 @@ const ProjectPage = () => {
                 className={`bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 items-center mb-12 transition-all duration-300 ${
                   shouldBlur(index) ? "blur-sm" : ""
                 }`}
-                style={{ position: "sticky", top: "90px", zIndex: 10 }} // Make sure the sticky behavior works
+                style={{
+                  position: "sticky",
+                  top: "90px",
+                  zIndex: 10,
+                }}
               >
                 {/* Left Section - Text */}
                 <div className="md:w-1/2">
-                  <p className="text-teal-600 uppercase tracking-wider">
+                  <p className="text-blue-600 uppercase tracking-wider">
                     {project.company} • {project.year}
                   </p>
+
                   <h2 className="text-3xl font-bold mt-4">{project.title}</h2>
+
                   <ul className="mt-4 space-y-2">
                     {project.benefits.map((benefit, index) => (
                       <li key={index} className="flex items-center">
                         <svg
-                          className="w-6 h-6 text-teal-600 mr-2"
+                          className="w-6 h-6 text-blue-600 mr-2 flex-shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -222,15 +205,32 @@ const ProjectPage = () => {
                             d="M5 13l4 4L19 7"
                           />
                         </svg>
+
                         {benefit}
                       </li>
                     ))}
                   </ul>
-                  <Link href={project.link} passHref target="_blank">
-                    <div className="inline-block mt-6 px-6 py-2 bg-teal-600 text-white rounded-full font-bold hover:bg-teal-700">
-                      Visit Live Site &rarr;
-                    </div>
-                  </Link>
+
+                  {/* Buttons */}
+                  <div className="flex flex-wrap gap-3 mt-6">
+                    {/* Updated Link to use project.slug */}
+                    <Link
+                      href={`/Projects/${project.slug}`}
+                      className="inline-block px-6 py-2.5 bg-blue-600 text-white rounded-full font-bold transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200"
+                    >
+                      Project Details →
+                    </Link>
+
+                    {/* Live Site Button */}
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-6 py-2.5 bg-white text-blue-600 border-2 border-blue-600 rounded-full font-bold transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-lg hover:shadow-blue-200"
+                    >
+                      Visit Live Site ↗
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Right Section - Image */}
