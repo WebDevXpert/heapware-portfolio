@@ -1,5 +1,5 @@
 "use client";
-import { steps, teamData, platforms, faqs } from "../../data";
+import { platforms } from "../../data";
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import ServiceCard from "../../components/service-card";
@@ -18,12 +18,238 @@ export default function WebDevelopment() {
     services: [],
   });
 
+  const pageContent = {
+    hero: {
+      line1: "Search Engine",
+      line2: "Optimization Services",
+      description:
+        "Improve your visibility in organic search with an SEO program built around technical health, search intent, quality content, and measurable business outcomes. We turn search data into practical actions that help the right audience discover your brand.",
+      alt: "Professional SEO services",
+    },
+    overview: {
+      title: "SEO That Connects Search Intent to Business Growth",
+      description:
+        "We combine technical SEO, on-page optimization, content strategy, local visibility, and performance reporting to create a search presence that is useful to people and easier for search engines to understand.",
+      cards: [
+        {
+          title: "Technical SEO",
+          description:
+            "Resolve crawlability, indexing, site structure, metadata, performance, schema, and other technical barriers that can limit organic visibility.",
+        },
+        {
+          title: "On-Page SEO",
+          description:
+            "Optimize page structure, headings, internal links, content signals, and search intent so each important page has a clear purpose.",
+        },
+        {
+          title: "Content Strategy",
+          description:
+            "Build topic clusters, content briefs, and editorial priorities around the questions and needs your target audience actually searches for.",
+        },
+        {
+          title: "Local SEO",
+          description:
+            "Strengthen local discovery through location-focused optimization, business information consistency, and pages designed for high-intent local searches.",
+        },
+        {
+          title: "SEO Audits & Reporting",
+          description:
+            "Turn search data into an actionable roadmap with prioritized recommendations, performance tracking, and clear reporting.",
+        },
+      ],
+    },
+    why: {
+      title: "Why Choose Us for SEO?",
+      description:
+        "SEO works best as a disciplined, ongoing process. We focus on the technical foundation, the quality of the content, and the search journey together instead of treating rankings as an isolated metric.",
+      features: [
+        {
+          id: "01",
+          title: "Technical SEO Foundations",
+          desc: "We identify crawl, indexation, architecture, metadata, performance, and structured-data issues that can hold important pages back.",
+        },
+        {
+          id: "02",
+          title: "Search Intent Mapping",
+          desc: "We align target topics with the real intent behind searches so content serves users rather than chasing keywords alone.",
+        },
+        {
+          id: "03",
+          title: "Content That Earns Attention",
+          desc: "We help build useful, well-structured content that answers important questions and creates stronger topical relevance.",
+        },
+        {
+          id: "04",
+          title: "Authority & Internal Linking",
+          desc: "A thoughtful internal-linking and content structure makes important pages easier to discover and strengthens the overall site architecture.",
+        },
+        {
+          id: "05",
+          title: "Measurement & Reporting",
+          desc: "We track meaningful indicators such as organic traffic, visibility, engagement, conversions, and opportunities—not just one ranking number.",
+        },
+        {
+          id: "06",
+          title: "Continuous Optimization",
+          desc: "Search changes over time. We use performance data and new opportunities to refine pages, content priorities, and technical improvements.",
+        },
+      ],
+    },
+    cta: "Want your website to be discovered by the right audience? Let’s build an SEO strategy that improves visibility, strengthens content, and supports real business goals.",
+    processTitle: "Our SEO Delivery Process",
+    processDescription:
+      "We move from diagnosis to execution with a prioritized roadmap, measurable checkpoints, and continuous refinement as your search data develops.",
+    team: {
+      title: "Bring SEO Specialists Together",
+      description:
+        "SEO is multidisciplinary. Our workflow brings technical, content, analytics, and product thinking together so recommendations are practical to implement and tied to business outcomes.",
+    },
+    toolsTitle: "SEO Platforms & Analytics",
+    tools: [
+      {
+        name: "Google Analytics",
+        short: "GA",
+      },
+      {
+        name: "Search Console",
+        short: "SC",
+      },
+      {
+        name: "GA4",
+        short: "G4",
+      },
+      {
+        name: "Ahrefs",
+        short: "A",
+      },
+      {
+        name: "Semrush",
+        short: "S",
+      },
+      {
+        name: "Screaming Frog",
+        short: "SF",
+      },
+      {
+        name: "Looker Studio",
+        short: "LS",
+      },
+      {
+        name: "Schema",
+        short: "SD",
+      },
+    ],
+  };
+
+  const processSteps = [
+    {
+      title: "SEO Discovery & Audit",
+      icon: "/icon/str.svg",
+      content:
+        "We review your website, competitors, search landscape, analytics, indexation, and existing content to establish a baseline.",
+    },
+    {
+      title: "Keyword & Intent Research",
+      icon: "/icon/req.svg",
+      content:
+        "We identify high-value topics and group them by intent, audience needs, business value, and stage of the customer journey.",
+    },
+    {
+      title: "Technical Optimization",
+      icon: "/icon/user.svg",
+      content:
+        "We address crawlability, architecture, metadata, performance, structured data, redirects, and other technical opportunities.",
+    },
+    {
+      title: "On-Page & Content Optimization",
+      icon: "/icon/front.svg",
+      content:
+        "We improve important pages and build content recommendations around clear search intent and useful information.",
+    },
+    {
+      title: "Authority & Internal Linking",
+      icon: "/icon/testing.svg",
+      content:
+        "We strengthen the internal content structure and identify credible opportunities to build relevance and authority.",
+    },
+    {
+      title: "Measurement & Reporting",
+      icon: "/icon/web.svg",
+      content:
+        "We establish reporting around organic visibility, traffic, engagement, leads, and other agreed business indicators.",
+    },
+    {
+      title: "Ongoing Growth Iterations",
+      icon: "/icon/support.svg",
+      content:
+        "We review results, identify new opportunities, refresh content, and prioritize the next highest-impact improvements.",
+    },
+  ];
+  const teamItems = [
+    {
+      title: "Designer",
+      description:
+        "SEO strategists translate business objectives and search data into a prioritized roadmap of opportunities.",
+      icon: "/icons/designer.png",
+    },
+    {
+      title: "Engineering",
+      description:
+        "Content specialists shape topics, briefs, page structures, and messaging around real search intent.",
+      icon: "/icons/ios.png",
+    },
+    {
+      title: "Mobile Specialist",
+      description:
+        "Technical specialists investigate crawlability, performance, indexing, structured data, and site architecture.",
+      icon: "/icons/android.png",
+    },
+    {
+      title: "Product Manager",
+      description:
+        "Analysts monitor organic performance and turn search data into decisions about what to improve next.",
+      icon: "/icon/front.svg",
+    },
+    {
+      title: "QA & Testing",
+      description:
+        "Project and QA support helps ensure recommendations are implemented correctly and checked after release.",
+      icon: "/icons/qa.png",
+    },
+  ];
+  const serviceFaqs = [
+    {
+      question: "How long does SEO take to show results?",
+      answer:
+        "SEO is cumulative. The timeline depends on your starting point, competition, site quality, content depth, and implementation speed. We focus on measurable improvements and a clear sequence of priorities rather than promising a fixed ranking date.",
+    },
+    {
+      question: "Do you only focus on keywords and rankings?",
+      answer:
+        "No. We consider technical health, search intent, content quality, internal linking, user behavior, conversions, and overall organic visibility together.",
+    },
+    {
+      question: "Can you audit an existing SEO setup?",
+      answer:
+        "Yes. A technical and content audit can identify issues, missed opportunities, competing pages, weak information architecture, and areas where existing work can be improved.",
+    },
+    {
+      question: "Do you provide content recommendations as part of SEO?",
+      answer:
+        "Yes. We can provide topic opportunities, content briefs, page optimization guidance, internal-linking recommendations, and content refresh priorities.",
+    },
+    {
+      question: "How do you report SEO performance?",
+      answer:
+        "Reporting can include organic traffic, visibility, indexed pages, high-value landing pages, conversions, technical improvements, and progress against the agreed goals.",
+    },
+  ];
   const services = [
-    "Website",
-    "Mobile App",
-    "Digital Product",
-    "Software Development",
-    "Ecommerce",
+    "SEO Audit",
+    "Technical SEO",
+    "On-Page SEO",
+    "Content SEO",
+    "Local SEO",
   ];
 
   const handleChange = (e) => {
@@ -52,7 +278,7 @@ export default function WebDevelopment() {
     setOpenIndices((prevIndices) =>
       prevIndices.includes(index)
         ? prevIndices.filter((i) => i !== index)
-        : [...prevIndices, index]
+        : [...prevIndices, index],
     );
   };
   return (
@@ -60,14 +286,11 @@ export default function WebDevelopment() {
       <section className="flex flex-col md:flex-row items-center justify-between px-10 py-32 bg-white">
         <div className="md:w-1/2 space-y-5 max-w-xl">
           <h1 className="text-5xl md:text-6xl font-bold text-black leading-tight">
-            Search Engine <br />
-            <span className="text-teal-500">Optimization Services</span>
+            {pageContent.hero.line1} <br />
+            <span className="text-teal-500">{pageContent.hero.line2}</span>
           </h1>
           <p className="text-gray-600 text-lg">
-            Enhance your digital presence with our advanced web development
-            solutions. We offer a comprehensive suite of services, spanning from
-            captivating website design to the creation of sophisticated web
-            applications.
+            {pageContent.hero.description}
           </p>
           {/* Add a wrapper div to center the button with padding */}
           <div className="w-full flex justify-center md:justify-start mt-6">
@@ -79,110 +302,58 @@ export default function WebDevelopment() {
 
         <div className="md:w-1/2 flex justify-center relative">
           <div className="relative w-[400px] h-[300px]">
-            <img
-              src="https://codeupscale.com/_next/static/media/webimg1.aeaea2dd.png"
-              alt="Web Development"
-              className="w-full h-auto rounded-xl"
+            <Image
+              src="https://images.unsplash.com/photo-1709281847780-2b34c28853c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt={pageContent.hero.alt}
+              fill
+              sizes="400px"
+              className="w-full h-full rounded-xl object-cover"
             />
           </div>
         </div>
       </section>
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto text-center px-6">
-          <h5 className="text-teal-500 font-semibold">We Serve</h5>
+          <h5 className="text-teal-500 font-semibold">What We Do</h5>
           <h1 className="md:w-2/3 mx-auto text-4xl font-bold text-gray-900 mt-4">
-            A Sneak Peek of Our Custom Web Development Services
+            {pageContent.overview.title}
           </h1>
           <p className="text-gray-600 text-lg mt-4">
-            Delivering convenience-focused web application development services
-            in any form is what we’re inclined towards.
+            {pageContent.overview.description}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-6 md:px-16">
-          <ServiceCard
-            imgSrc="https://codeupscale.com/services_images/services/Group.svg"
-            title="Frontend/Backend Development"
-            description="Collaborate with us to transform your exceptional, high-impact web solutions that drive success and innovation in the digital realm with our expert Frontend and Backend Development services."
-          />
-
-          <ServiceCard
-            imgSrc="https://codeupscale.com/services_images/services/Rectangle.svg"
-            title="Full-stack Development"
-            description="Maximize your digital potential with us for an all-inclusive approach that propels your digital vision to new heights, ensuring a competitive edge in the dynamic online landscape."
-          />
-
-          <ServiceCard
-            imgSrc="https://codeupscale.com/services_images/services/UXicon.svg"
-            title="UI/UX Web Design"
-            description="Amplify your digital footprint with our premium UI/UX web design services. Our skilled designers craft mesmerizing, user-focused interfaces that guarantee a remarkable online journey."
-          />
-
-          <ServiceCard
-            imgSrc="https://codeupscale.com/services_images/services/CMSicon.svg"
-            title="Content Management Systems (CMS)"
-            description="Boost your online presence with our advanced CMS solutions, ensuring your digital platform remains competitive and consistently updated."
-          />
-
-          <ServiceCard
-            imgSrc="https://codeupscale.com/services_images/services/Vicon.svg"
-            title="Custom Web Solutions"
-            description="Partner with us to take your digital presence to its full potential. We create custom websites and applications tailored to your unique needs."
-          />
+          {pageContent.overview.cards.map((card, index) => (
+            <ServiceCard
+              key={index}
+              imgSrc={
+                [
+                  "https://codeupscale.com/services_images/services/Group.svg",
+                  "https://codeupscale.com/services_images/services/Rectangle.svg",
+                  "https://codeupscale.com/services_images/services/UXicon.svg",
+                  "https://codeupscale.com/services_images/services/CMSicon.svg",
+                  "https://codeupscale.com/services_images/services/Vicon.svg",
+                ][index]
+              }
+              title={card.title}
+              description={card.description}
+            />
+          ))}
         </div>
       </section>
       <section className="bg-gray-50 py-16 px-6 md:px-20 text-center">
-        {/* Section Title */}
-        <h3 className="text-lg text-blue-600 font-semibold">
-          Why You Choose Us
-        </h3>
+        <h3 className="text-lg text-blue-600 font-semibold">Why Choose Us</h3>
         <h2 className="text-4xl font-bold text-gray-900 mt-2">
-          Why Should You Choose Code Upscale <br /> For Web Development
-          Services?
+          {pageContent.why.title}
         </h2>
         <p className="text-gray-600 text-lg mt-4 max-w-3xl mx-auto">
-          We capitalized on 6 key value services and successfully built a
-          reputation as the leading and trusted Web app development services
-          provider in the U.S.A., U.K., and U.A.E.
+          {pageContent.why.description}
         </p>
-
-        {/* Features Grid */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-2 md:px-6">
-          {[
-            {
-              id: "01",
-              title: "Unparalleled Expertise",
-              desc: "Our team comprises industry experts, steeped in the art of software development, guaranteeing high-quality solutions for your business.",
-            },
-            {
-              id: "02",
-              title: "Tailored Excellence",
-              desc: "We specialize in creating customized software solutions meticulously crafted to suit your unique business needs.",
-            },
-            {
-              id: "03",
-              title: "Cutting-edge Technology",
-              desc: "We leverage the latest frameworks and technologies to build fast, secure, and scalable web applications.",
-            },
-            {
-              id: "04",
-              title: "Client-Centric Approach",
-              desc: "Our solutions are tailored to fit your business goals, ensuring long-term success and satisfaction.",
-            },
-            {
-              id: "05",
-              title: "Reliable Support",
-              desc: "We provide 24/7 support to ensure your applications run smoothly with minimal downtime.",
-            },
-            {
-              id: "06",
-              title: "Scalable Solutions",
-              desc: "Whether you’re a startup or an enterprise, our solutions grow with your business, ensuring future success.",
-            },
-          ].map((feature, index) => (
+          {pageContent.why.features.map((feature) => (
             <div
-              key={index}
-              className="bg-white p-8 rounded-xl shadow-md text-left w-full md:w-[90%] mx-auto 
-                         transition duration-300 ease-in-out hover:bg-teal-500 hover:text-white"
+              key={feature.id}
+              className="bg-white p-8 rounded-xl shadow-md text-left w-full md:w-[90%] mx-auto transition duration-300 ease-in-out hover:bg-teal-500 hover:text-white"
             >
               <span className="text-6xl font-bold text-gray-200">
                 {feature.id}
@@ -198,21 +369,25 @@ export default function WebDevelopment() {
       <section className="relative bg-teal-500 text-white flex flex-col md:flex-row items-center px-8 py-16 md:py-24">
         <div className="md:w-1/2 text-left">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Share Your Idea <br />
-            With Us Today And <br />
-            <span className="text-white">GO PREMIUM</span> with A <br />
-            Featured-packed Web Development Services
+            {pageContent.hero.line2} <br />
+            <span className="text-white">BUILT FOR RESULTS</span>
+            <br />
+            Without Compromising Quality
           </h1>
-
+          <p className="mt-5 text-white/90 text-lg max-w-xl">
+            {pageContent.cta}
+          </p>
           <button className="mt-6 bg-black text-white px-6 py-3 rounded-md text-lg flex items-center">
             Get Started →
           </button>
         </div>
         <div className="md:w-1/2 relative flex justify-center mt-10 md:mt-0">
-          <img
-            src="https://codeupscale.com/_next/static/media/ideaUser.bbfcece6.png"
-            alt="Person"
-            className="w-96 h-auto rounded-lg"
+          <Image
+            src="https://images.unsplash.com/photo-1618477388954-7852f32655ec?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt={pageContent.hero.alt}
+            width={640}
+            height={480}
+            className="w-96 h-auto rounded-lg object-contain"
           />
         </div>
 
@@ -236,18 +411,17 @@ export default function WebDevelopment() {
           Development Process
         </h2>
         <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mt-2">
-          Discover Our Fine-Tuned Web Development Process
+          {pageContent.processTitle}
         </h1>
         <p className="text-center text-gray-600 mt-4 text-sm md:text-base max-w-2xl">
-          Journey with us into the universal Web Application development process
-          to paint the canvas of your next big project.
+          {pageContent.processDescription}
         </p>
 
         {/* Steps Section */}
         <div className="flex flex-col md:flex-row w-full max-w-6xl mt-12 gap-8">
           {/* Steps List (Left Side) */}
           <div className="w-full md:w-1/3 space-y-3">
-            {steps.map((step, index) => (
+            {processSteps.map((step, index) => (
               <div
                 key={index}
                 onMouseOver={() => setActiveStep(index)}
@@ -275,36 +449,31 @@ export default function WebDevelopment() {
             <h2 className="text-2xl font-semibold text-gray-900 flex items-center gap-3">
               {/* ✅ Corrected Image Loading */}
               <Image
-                src={steps[activeStep].icon}
-                alt={steps[activeStep].title}
+                src={processSteps[activeStep].icon}
+                alt={processSteps[activeStep].title}
                 width={28}
                 height={28}
                 className="w-7 h-7"
               />
-              {steps[activeStep].title}
+              {processSteps[activeStep].title}
             </h2>
             <p className="text-gray-600 mt-3 align-center leading-relaxed">
-              {steps[activeStep].content}
+              {processSteps[activeStep].content}
             </p>
           </div>
         </div>
       </div>
       <section className="w-full max-w-7xl mx-auto bg-gray-50 py-16 px-6">
         <div className="text-center">
-          <h4 className="text-teal-500 font-semibold">Team Work</h4>
-          <h2 className="text-3xl font-bold mt-2">Team Work On Your Project</h2>
-          <p className="text-gray-600 mt-4">
-            We deliver profitable and gratifying offshore BlockChain development
-            services. You may connect with a large talent pool in 60 seconds at
-            a cost roughly 50% lower than Western marketplaces. We can
-            demonstrate it to you through a trial.
-          </p>
+          <h4 className="text-teal-500 font-semibold">Our Specialists</h4>
+          <h2 className="text-3xl font-bold mt-2">{pageContent.team.title}</h2>
+          <p className="text-gray-600 mt-4">{pageContent.team.description}</p>
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 w-full mt-10 relative">
           {/* Left Accordion */}
           <div className="flex-1 space-y-4">
-            {teamData.map((item, index) => (
+            {teamItems.map((item, index) => (
               <div
                 key={index}
                 className="bg-white shadow-md rounded-lg overflow-hidden"
@@ -356,24 +525,26 @@ export default function WebDevelopment() {
       </section>
       <section className="py-10 bg-white text-center">
         <h5 className="text-blue-600 font-semibold text-lg">
-          Web Development Platforms
+          {pageContent.toolsTitle}
         </h5>
         <h1 className="text-4xl font-bold text-gray-900 mt-2">
-          Revolutionize Your Brand With <br /> Advanced Web Development
-          Platforms
+          Explore the Technologies Powering Modern Digital Products
         </h1>
-        <div className="flex flex-wrap justify-center gap-4 mt-10">
+        <div className="flex flex-wrap justify-center gap-4 mt-10 px-4 md:px-6">
           {platforms.map((platform, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center w-40 h-40 hover:shadow-lg transition duration-300"
+              className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center justify-center w-40 h-40 hover:shadow-lg transition duration-300"
             >
-              <img
-                src={platform.img}
+              <Image
+                src={platform.img.trim()}
                 alt={platform.name}
-                className="w-16 h-16"
+                width={64}
+                height={64}
+                className="w-16 h-16 object-contain"
+                unoptimized
               />
-              <p className="mt-2 font-semibold text-black">{platform.name}</p>
+              <p className="mt-3 font-semibold text-black">{platform.name}</p>
             </div>
           ))}
         </div>
@@ -383,11 +554,11 @@ export default function WebDevelopment() {
           Frequently Ask Questions
         </h5>
         <h1 className="text-3xl font-bold text-gray-900 mt-3 leading-snug">
-          Some of Our Frequently <br /> Asked Questions
+          Questions We&apos;re Often Asked
         </h1>
 
         <div className="max-w-2xl mx-auto mt-6 space-y-4">
-          {faqs.map((faq, index) => (
+          {serviceFaqs.map((faq, index) => (
             <div
               key={index}
               className="border text-left rounded-lg p-6 bg-white min-h-[100px]"
