@@ -11,28 +11,28 @@ const testimonials = [
     role: "Mobile App Development Client",
     content:
       "Heapware Technologies transformed our vision into an amazing mobile app. Their team was responsive, knowledgeable, and genuinely cared about our success!",
-    image: "/bg-1.jpg",
+    image: "/testmonial-1.jpg",
   },
   {
     name: "Falak Sher",
     role: "Digital Marketing Client",
     content:
       "The digital marketing strategies devised by Heapware have significantly boosted our online reach and helped us connect with our audience more effectively!",
-    image: "/bg-3.jpeg",
+    image: "/testmonial-2.jpg",
   },
   {
     name: "Waleed Awan",
     role: "Web Development Client",
     content:
       "With Heapware's expertise in web development, we were able to revamp our existing website and improve user engagement dramatically. We couldn’t be happier with the result!",
-    image: "/bg-2.jpg",
+    image: "/testmonial-3.jpg",
   },
   {
     name: "Danyal Khan",
     role: "E-commerce Client",
     content:
       "Their team made our e-commerce launch a breeze! The support we received was unmatched, and the sales have exceeded our expectations.",
-    image: "/bg-2.jpg",
+    image: "/testmonial-4.jpg",
   },
 ];
 

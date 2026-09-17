@@ -150,6 +150,17 @@ const Navbar = () => {
               </motion.div>
             </Link>
 
+            {/* About */}
+            <Link href="/about">
+              <motion.div
+                whileHover={{ y: -1 }}
+                className="group relative rounded-xl px-4 py-2.5 text-sm font-medium text-gray-700 transition-all duration-300 hover:bg-blue-50 hover:text-gray-950"
+              >
+                <span>About</span>
+                <span className="absolute bottom-1 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-blue-600 transition-all duration-300 group-hover:w-5" />
+              </motion.div>
+            </Link>
+
             {/* Projects */}
             <Link href="/Projects">
               <motion.div
@@ -252,17 +263,6 @@ const Navbar = () => {
                 )}
               </AnimatePresence>
             </div>
-
-            {/* About */}
-            <Link href="/about">
-              <motion.div
-                whileHover={{ y: -1 }}
-                className="group relative rounded-xl px-4 py-2.5 text-sm font-medium text-gray-700 transition-all duration-300 hover:bg-blue-50 hover:text-gray-950"
-              >
-                <span>About</span>
-                <span className="absolute bottom-1 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-blue-600 transition-all duration-300 group-hover:w-5" />
-              </motion.div>
-            </Link>
 
             {/* Career */}
             <Link href="/career">

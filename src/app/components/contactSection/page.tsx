@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 // DraggableSliderTabs Component
@@ -16,12 +16,12 @@ const DraggableSliderTabs = ({ onTabClick }: { onTabClick: (tab: string) => void
     "Comedy", "Gaming", "Share Market", "Smartphones", "Data Structure",
   ];
 
-  const handleIcons = () => {
+  const handleIcons = useCallback(() => {
     if (!tabsBox.current) return;
     const maxScrollableWidth = tabsBox.current.scrollWidth - tabsBox.current.clientWidth;
     setShowLeftIcon(tabsBox.current.scrollLeft > 0);
     setShowRightIcon(tabsBox.current.scrollLeft < maxScrollableWidth - 5);
-  };
+  }, []);
 
   const handleScroll = (direction: "left" | "right") => {
     if (!tabsBox.current) return;
@@ -30,15 +30,18 @@ const DraggableSliderTabs = ({ onTabClick }: { onTabClick: (tab: string) => void
     setTimeout(handleIcons, 300);
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging || !tabsBox.current) return;
-    tabsBox.current.scrollLeft -= e.movementX;
-    handleIcons();
-  };
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!isDragging || !tabsBox.current) return;
+      tabsBox.current.scrollLeft -= e.movementX;
+      handleIcons();
+    },
+    [isDragging, handleIcons],
+  );
 
-  const stopDragging = () => {
+  const stopDragging = useCallback(() => {
     setIsDragging(false);
-  };
+  }, []);
 
   useEffect(() => {
     const tabsElement = tabsBox.current;
@@ -51,7 +54,7 @@ const DraggableSliderTabs = ({ onTabClick }: { onTabClick: (tab: string) => void
       tabsElement.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", stopDragging);
     };
-  }, [isDragging]);
+  }, [isDragging, handleMouseMove, stopDragging]);
 
   const handleTabClick = (index: number) => {
     setActiveTab(index);
