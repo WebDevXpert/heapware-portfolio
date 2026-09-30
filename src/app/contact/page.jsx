@@ -1,13 +1,18 @@
-import React from 'react'
-import Contact from "./contact1/page"
-import ContactSection from '../components/contactSection/page'
-const ContactUs = () => {
+import PageHeader from "@/components/PageHeader";
+import ContactSection from "@/components/ContactSection";
+
+export const metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Heapware to discuss your website, app, SaaS or ERP project.",
+  alternates: { canonical: "/contact" },
+};
+
+export default function ContactPage() {
   return (
     <div>
-        <Contact/>
-        <ContactSection/>
+      <PageHeader eyebrow="Get In Touch" title="Contact" />
+      <ContactSection />
     </div>
-  )
+  );
 }
-
-export default ContactUs

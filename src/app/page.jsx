@@ -1,29 +1,29 @@
-"use client";
-import Cards from "./components/cards/page";
-import CaseStudio from "./components/casestudio/page";
-import ContactSection from "./components/contactSection/page";
-import ITSection from "./components/itSection/page";
-import Mission from "./components/mission/page";
-import ItPartnerSection from "./components/partnerSection/page";
-// import Pricing from "./components/pricing/page";
-import ServicesSection from "./components/servicesSection/page";
-import TrustedBySection from "./components/trustedSection/page";
-import Waleed from "./components/testimonials/page";
+import ServiceCards from "@/components/ServiceCards";
+import CaseStudies from "@/components/CaseStudies";
+import ContactSection from "@/components/ContactSection";
+import HeroSlider from "@/components/HeroSlider";
+import Mission from "@/components/Mission";
+import PartnerSection from "@/components/PartnerSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import TrustedSection from "@/components/TrustedSection";
+import Testimonials from "@/components/Testimonials";
+
+export const metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
     <div>
-      <ITSection />
-      {/* <DraggableSliderTabs/> */}
-      <ItPartnerSection />
-      <Cards />
-      <TrustedBySection />
-      <ServicesSection />
-      <CaseStudio />
+      <HeroSlider />
+      <PartnerSection />
+      <ServiceCards />
+      <TrustedSection />
+      <WhyChooseUs />
+      <CaseStudies />
       <Mission />
       <ContactSection />
-      {/* <Pricing /> */}
-      <Waleed />
+      <Testimonials />
     </div>
   );
 }

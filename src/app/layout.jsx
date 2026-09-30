@@ -1,15 +1,32 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Navbar from "./components/navbar/page";
-import Footer from "./components/footer/page";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { site } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Heapware | Innovative Web Solutions, Tailored for You",
-  description:
-    "Delivering SMART Solutions: Specific, Measurable, Agile, Realistic, Timely",
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} | ${site.tagline}`,
+    template: `%s | ${site.name}`,
+  },
+  description: site.description,
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: `${site.name} | ${site.tagline}`,
+    description: site.description,
+    images: [{ url: "/hero-slider-1.jpg", width: 2400, height: 1600 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | ${site.tagline}`,
+    description: site.description,
+    images: ["/hero-slider-1.jpg"],
+  },
   verification: {
     google: "srvBzrw-jN0Em26z_5ymEr2_Nc3qYRuMFrWN0stdf58",
   },
