@@ -106,7 +106,7 @@ export default function ProjectDetails({ project }) {
       <section className="relative overflow-hidden bg-slate-50 pb-16 pt-32 md:pb-24 md:pt-36">
         <div className="mx-auto w-[90%] max-w-7xl">
           <Link
-            href="/Projects"
+            href="/projects"
             className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-800"
           >
             <ArrowLeft size={17} />

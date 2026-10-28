@@ -1,13 +1,14 @@
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import Testimonials from "@/components/Testimonials";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Services",
+export const metadata = pageMetadata({
+  title: "Software Development Services in Lahore",
   description:
-    "Web development, mobile apps, SaaS, ERP systems, SEO and digital marketing services from Heapware.",
-  alternates: { canonical: "/services" },
-};
+    "Web development, mobile app development, SaaS, ERP software, SEO and digital marketing services from Heapware, a software house in Lahore, Pakistan.",
+  path: "/services",
+});
 
 const services = [
   {
@@ -60,7 +61,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="What We Do"
         title="Our Services"
-        description="We offer a wide range of IT solutions tailored to your business needs."
+        description="Software development and digital growth services from our team in Lahore, tailored to your business needs."
       />
 
       <div className="bg-white px-8 py-16">

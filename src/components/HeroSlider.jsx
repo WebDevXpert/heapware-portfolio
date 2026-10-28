@@ -8,15 +8,15 @@ import { Link as ScrollLink } from "react-scroll";
 const slides = [
   {
     image: "/hero-slider-1.jpg",
-    eyebrow: "Smart Technology Solutions",
-    title: "Creating a Better",
+    alt: "Heapware software development team at work in Lahore",
+    title: "Creating Better",
     highlight: "IT Solutions.",
     description:
       "Transform your ideas into powerful digital experiences with Heapware. We build solutions that help businesses move faster and grow smarter.",
   },
   {
     image: "/hero-slider-2.jpg",
-    eyebrow: "Digital Transformation",
+    alt: "Custom software and web development for growing businesses",
     title: "Technology That",
     highlight: "Moves Your Business Forward.",
     description:
@@ -24,7 +24,7 @@ const slides = [
   },
   {
     image: "/software-house-team.jpg",
-    eyebrow: "Built Around Your Business",
+    alt: "Heapware software house team planning a project",
     title: "Your Vision.",
     highlight: "Our Technology.",
     description:
@@ -140,7 +140,7 @@ const ITSection = () => {
           >
             <Image
               src={item.image}
-              alt={item.title}
+              alt={item.alt}
               fill
               priority={index === 0}
               sizes="100vw"
@@ -160,21 +160,22 @@ const ITSection = () => {
       <div className="relative z-10 flex min-h-screen items-center">
         <div className="w-[90%] mx-auto">
           <div ref={textRef} className="max-w-3xl pt-24 md:pt-28 lg:pt-20">
-            <p
+            {/* Stays the same on every slide so search engines always read one keyword-focused H1 */}
+            <h1
               ref={eyebrowRef}
               className="mb-4 text-base font-medium uppercase tracking-[0.2em] text-blue-300 sm:text-lg"
             >
-              {slide.eyebrow}
-            </p>
+              Software House in Lahore for Web, App &amp; ERP Development
+            </h1>
 
-            <h1 className="text-4xl font-bold leading-tight sm:text-6xl lg:text-7xl">
+            <p className="text-4xl font-bold leading-tight sm:text-6xl lg:text-7xl">
               <span ref={titleRef} className="block">
                 {slide.title}
               </span>
               <span ref={highlightRef} className="mt-1 block text-blue-400">
                 {slide.highlight}
               </span>
-            </h1>
+            </p>
 
             <p
               ref={descriptionRef}

@@ -1,12 +1,13 @@
 import PageHeader from "@/components/PageHeader";
 import ProjectList from "@/components/ProjectList";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Projects",
+export const metadata = pageMetadata({
+  title: "Our Work – Web & App Development Case Studies",
   description:
-    "Selected websites and digital products delivered by Heapware, with the goals, challenges and results behind each one.",
-  alternates: { canonical: "/Projects" },
-};
+    "Case studies of websites, ecommerce stores, healthcare and travel platforms built by Heapware, with the goals, challenges and results behind each project.",
+  path: "/projects",
+});
 
 export default function ProjectsPage() {
   return (

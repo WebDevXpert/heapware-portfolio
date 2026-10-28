@@ -3,6 +3,9 @@ export const projects = [
     id: 1,
     slug: "autoupscale",
     title: "Autoupscale",
+    industry: "Website Performance & UX",
+    metaDescription:
+      "How Heapware improved Autoupscale's website with UX and performance work: 50% faster site speed, 40% better user experience and 35% more mobile traffic.",
 
     description:
       "Autoupscale was focused on creating a stronger and more effective digital experience by improving usability, website performance, and mobile reach. The project emphasized making the platform easier to navigate while also addressing performance factors that directly influence how quickly users can interact with the website. Through a combination of user-experience improvements, performance optimization, and mobile-focused enhancements, the project delivered measurable improvements including a 40% enhancement in user experience, a 50% improvement in site speed, and a 35% increase in mobile traffic.",
@@ -64,6 +67,9 @@ export const projects = [
     id: 2,
     slug: "code-upscale",
     title: "Code Upscale",
+    industry: "Ecommerce Website",
+    metaDescription:
+      "Code Upscale ecommerce case study: how Heapware optimized the shopping journey, mobile usability and checkout conversion with Next.js.",
 
     description:
       "Code Upscale focused on improving an online shopping experience with particular attention to conversion performance, customer journey optimization, and mobile usability. The project aimed to reduce points of friction that could prevent visitors from completing their intended actions while creating a smoother experience throughout the shopping journey. The results included a 25% increase in conversion rates, a 15% reduction in cart abandonment, and a stronger mobile shopping experience.",
@@ -123,6 +129,9 @@ export const projects = [
     id: 4,
     slug: "sehatghar",
     title: "SehatGhar",
+    industry: "Healthcare Web Platform",
+    metaDescription:
+      "SehatGhar healthcare case study: how Heapware built a cleaner digital experience that makes healthcare services easier to find and use.",
 
     description:
       "SehatGhar focused on improving access to healthcare services through a cleaner and more streamlined digital experience. The project was centered around making important information and services easier to reach while simplifying the user journey through the platform. Alongside improving accessibility and navigation, the project also emphasized creating a more intuitive interface so users could interact with the platform more comfortably and efficiently.",
@@ -182,6 +191,9 @@ export const projects = [
     id: 5,
     slug: "alezay-fashion",
     title: "Alezay Fashion",
+    industry: "Fashion Ecommerce",
+    metaDescription:
+      "Alezay Fashion case study: how Heapware redesigned an online fashion store to improve the shopping experience and customer engagement.",
 
     description:
       "Alezay Fashion was focused on improving the online shopping experience while increasing digital engagement with a stronger and more refined user interface. The project placed attention on how customers interact with an online fashion platform, from discovering products and browsing content to engaging with the overall shopping experience. Through improvements to usability, interface quality, and engagement-focused interactions, the project achieved a reported 50% increase in online engagement while creating a more polished shopping experience.",
@@ -241,6 +253,9 @@ export const projects = [
     id: 6,
     slug: "thumbtack",
     title: "ThumbTack",
+    industry: "Contractor Management Platform",
+    metaDescription:
+      "ThumbTack case study: how Heapware built clearer task and update workflows that improved contractor engagement on the platform.",
 
     description:
       "ThumbTack focused on improving contractor engagement and creating a more effective environment for managing tasks and updates. The project emphasized making task-oriented interactions clearer and more organized so contractors could manage their activities with greater confidence. By strengthening the task-management experience and supporting timely updates, the project achieved a reported 40% increase in contractor engagement while also improving the overall workflow.",
@@ -300,6 +315,9 @@ export const projects = [
     id: 7,
     slug: "fly-hyer",
     title: "Fly Hyer",
+    industry: "Travel Booking Website",
+    metaDescription:
+      "Fly Hyer travel booking case study: how Heapware improved flight search and streamlined the booking journey for travellers.",
 
     description:
       "Fly Hyer focused on improving the digital travel-booking experience by making flight discovery easier, strengthening search functionality, and streamlining the journey from finding a flight to taking the next action. The project placed emphasis on reducing unnecessary friction during travel planning while improving the overall usability of the platform. These improvements helped contribute to a reported 30% increase in travel bookings and a more efficient flight-search experience.",
@@ -359,6 +377,9 @@ export const projects = [
     id: 9,
     slug: "patientory",
     title: "Patientory",
+    industry: "Healthcare Data Platform",
+    metaDescription:
+      "Patientory case study: how Heapware improved a healthcare technology platform for data analytics, patient-care workflows and data security.",
 
     description:
       "Patientory focused on improving a healthcare technology experience around data analytics, patient-care workflows, and data security. The project emphasized creating a more structured digital environment where healthcare-related information could be better organized while supporting more streamlined patient-care processes. At the same time, the project prioritized stronger security considerations so that the overall platform experience could better support sensitive healthcare-related workflows.",

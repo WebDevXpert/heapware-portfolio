@@ -7,10 +7,10 @@ import PartnerSection from "@/components/PartnerSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TrustedSection from "@/components/TrustedSection";
 import Testimonials from "@/components/Testimonials";
+import { site } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  alternates: { canonical: "/" },
-};
+export const metadata = pageMetadata({ description: site.description, path: "/" });
 
 export default function Home() {
   return (

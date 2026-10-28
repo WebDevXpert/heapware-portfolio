@@ -106,8 +106,9 @@ export default function ServiceCards() {
           </h2>
 
           <p className="mt-5 text-base leading-7 text-gray-600 md:text-lg">
-            We offer a wide range of services to meet your IT needs. Explore our
-            solutions designed to help your business thrive in the digital age.
+            From web development and mobile app development to SaaS, ERP
+            software, SEO and digital marketing, our Lahore team covers every
+            stage of building and growing your digital business.
           </p>
         </motion.div>
 

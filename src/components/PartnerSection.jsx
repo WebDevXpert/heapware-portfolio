@@ -60,10 +60,11 @@ const ItPartnerSection = () => {
             </h2>
 
             <p className="mb-8 text-base leading-7 text-gray-600 sm:text-lg">
-              At Heapware, we provide comprehensive IT solutions tailored to
-              your business needs. From websites and mobile apps to SaaS and
-              ERP systems, our team is dedicated to building software that runs
-              smoothly, securely, and efficiently.
+              Heapware is a software house in Lahore, Pakistan, providing IT
+              solutions tailored to your business needs. From custom websites
+              and mobile apps to SaaS products and ERP systems, our team builds
+              software that runs smoothly, securely, and efficiently for
+              clients in Pakistan and around the world.
             </p>
 
             {/* Workflow Automation */}

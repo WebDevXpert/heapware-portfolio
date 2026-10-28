@@ -1,12 +1,13 @@
 import PageHeader from "@/components/PageHeader";
 import { site } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Career",
+export const metadata = pageMetadata({
+  title: "Careers – Software Developer Jobs in Lahore",
   description:
-    "Open positions at Heapware. Join our team of developers and designers in Lahore.",
-  alternates: { canonical: "/career" },
-};
+    "Software developer jobs in Lahore at Heapware. We're hiring MERN stack, frontend and backend developers and UI/UX designers. Apply today.",
+  path: "/career",
+});
 
 const jobs = [
   {

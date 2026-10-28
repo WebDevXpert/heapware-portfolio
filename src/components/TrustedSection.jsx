@@ -18,7 +18,7 @@ const TrustedSection = () => {
               transition={{ duration: 0.4, delay: index * 0.08 }}
             >
               <Link
-                href={`/Projects/${project.slug}`}
+                href={`/projects/${project.slug}`}
                 className="flex h-24 items-center justify-center rounded-xl border border-gray-200 bg-slate-50 px-4 text-center text-lg font-bold tracking-tight text-gray-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
               >
                 {project.title}

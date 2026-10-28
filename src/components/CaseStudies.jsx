@@ -59,7 +59,7 @@ export default function CaseStudies() {
               className="group relative h-[500px] overflow-hidden rounded-2xl"
             >
               <Link
-                href={`/Projects/${project.slug}`}
+                href={`/projects/${project.slug}`}
                 className="absolute inset-0 z-10"
                 aria-label={`${project.title} case study`}
               />
@@ -118,7 +118,7 @@ export default function CaseStudies() {
           className="mt-12 text-center"
         >
           <Link
-            href="/Projects"
+            href="/projects"
             className="inline-flex items-center gap-2 rounded-full border border-blue-600 px-6 py-3 font-medium text-blue-600 transition-all duration-300 hover:bg-blue-600 hover:text-white"
           >
             View All Projects

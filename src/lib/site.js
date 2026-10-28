@@ -1,9 +1,12 @@
 export const site = {
   name: "Heapware",
+  legalName: "Heapware Technologies",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://heapware.com",
-  tagline: "Innovative Web Solutions, Tailored for You",
+  tagline: "Software House in Lahore for Web, App & ERP Development",
   description:
-    "Heapware builds websites, mobile apps, SaaS products and ERP systems, and helps businesses grow with SEO and digital marketing.",
+    "Heapware is a software house in Lahore, Pakistan building custom websites, mobile apps, SaaS products and ERP systems, plus SEO and digital marketing that grow your business.",
+  logo: "/new-heap-logo.png",
+  ogImage: "/hero-slider-1.jpg",
   email: "harisali@heapware.com",
   phone: "+92 314-4594049",
   phoneHref: "tel:+923144594049",
@@ -13,6 +16,15 @@ export const site = {
     "Block F Punjab Cooperative Housing",
     "society, Lahore, Punjab 54792",
   ],
+  // Same address split into the fields structured data expects.
+  postalAddress: {
+    streetAddress:
+      "13-F1, 2nd Floor, Ghazi Rd, Block F Punjab Cooperative Housing Society",
+    addressLocality: "Lahore",
+    addressRegion: "Punjab",
+    postalCode: "54792",
+    addressCountry: "PK",
+  },
   social: {
     facebook: "https://www.facebook.com/heapware",
     linkedin: "https://www.linkedin.com/company/heapware-technologies",

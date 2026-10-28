@@ -61,7 +61,7 @@ export default function ProjectList() {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link
-                    href={`/Projects/${project.slug}`}
+                    href={`/projects/${project.slug}`}
                     className="inline-block rounded-full bg-blue-600 px-6 py-2.5 font-bold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200"
                   >
                     Project Details →

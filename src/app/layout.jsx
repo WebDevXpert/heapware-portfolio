@@ -3,7 +3,9 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import { site } from "@/lib/site";
+import { organizationSchema, pageMetadata } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,20 +15,7 @@ export const metadata = {
     default: `${site.name} | ${site.tagline}`,
     template: `%s | ${site.name}`,
   },
-  description: site.description,
-  openGraph: {
-    type: "website",
-    siteName: site.name,
-    title: `${site.name} | ${site.tagline}`,
-    description: site.description,
-    images: [{ url: "/hero-slider-1.jpg", width: 2400, height: 1600 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${site.name} | ${site.tagline}`,
-    description: site.description,
-    images: ["/hero-slider-1.jpg"],
-  },
+  ...pageMetadata({ description: site.description, path: "/" }),
   verification: {
     google: "srvBzrw-jN0Em26z_5ymEr2_Nc3qYRuMFrWN0stdf58",
   },
@@ -59,6 +48,8 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+
+        <JsonLd data={organizationSchema()} />
 
         <Navbar />
         <main>{children}</main>

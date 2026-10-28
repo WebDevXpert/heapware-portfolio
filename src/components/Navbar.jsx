@@ -177,7 +177,7 @@ const Navbar = () => {
             </Link>
 
             {/* Projects */}
-            <Link href="/Projects">
+            <Link href="/projects">
               <motion.div
                 whileHover={{ y: -1 }}
                 className="group relative rounded-xl px-4 py-2.5 text-sm font-medium text-gray-700 transition-all duration-300 hover:bg-blue-50 hover:text-gray-950"
@@ -390,7 +390,7 @@ const Navbar = () => {
                   </motion.div>
                 </Link>
 
-                <Link href="/Projects" onClick={closeMenu}>
+                <Link href="/projects" onClick={closeMenu}>
                   <motion.div
                     initial={{ opacity: 0, x: -15 }}
                     animate={{ opacity: 1, x: 0 }}

@@ -2,11 +2,15 @@
 export const services = {
   "web-development": {
     "slug": "web-development",
+    "seo": {
+      "title": "Web Development Company in Lahore, Pakistan",
+      "description": "Heapware is a web development company in Lahore building fast, SEO-friendly websites, ecommerce stores and custom web applications. Get a free quote."
+    },
     "hero": {
       "line1": "Website",
       "line2": "Development Services",
-      "description": "We design and engineer fast, responsive websites and web applications that turn business goals into clear digital experiences. From marketing sites and CMS platforms to complex web applications, every build is structured for performance, usability, and long-term growth.",
-      "alt": "Professional web development services"
+      "description": "Heapware is a web development company in Lahore. We design and engineer fast, responsive websites and web applications that turn business goals into clear digital experiences. From marketing sites and CMS platforms to complex web applications, every build is structured for performance, usability, and long-term growth.",
+      "alt": "Web development company in Lahore building custom websites"
     },
     "overview": {
       "title": "Custom Web Development Built Around Your Business",
@@ -210,11 +214,15 @@ export const services = {
   },
   "app-development": {
     "slug": "app-development",
+    "seo": {
+      "title": "Mobile App Development Company in Lahore",
+      "description": "Android and iOS app development in Lahore, Pakistan. Heapware designs, builds and launches native and cross-platform mobile apps. Get a free quote."
+    },
     "hero": {
       "line1": "Mobile App",
       "line2": "Development Services",
-      "description": "Design and build reliable mobile applications that give customers a smooth experience and give your business a product it can evolve. We cover product discovery, interface design, development, integrations, testing, launch, and post-release improvement.",
-      "alt": "Professional mobile application development services"
+      "description": "As a mobile app development company in Lahore, we design and build reliable Android and iOS applications that give customers a smooth experience and give your business a product it can evolve. We cover product discovery, interface design, development, integrations, testing, launch, and post-release improvement.",
+      "alt": "Mobile app development in Lahore for Android and iOS"
     },
     "overview": {
       "title": "Mobile Apps Designed for Real-World Use",
@@ -418,11 +426,15 @@ export const services = {
   },
   "saas-development": {
     "slug": "saas-development",
+    "seo": {
+      "title": "SaaS Development Company in Pakistan",
+      "description": "Heapware builds SaaS products in Pakistan: multi-tenant architecture, subscription billing, integrations and MVPs that scale. Talk to our Lahore team."
+    },
     "hero": {
       "line1": "SaaS",
       "line2": "Development Services",
-      "description": "Launch and scale subscription-based software with a product architecture designed for growth. We cover product discovery, multi-tenant application design, billing, integrations, security, analytics, and the operational foundations required to run SaaS in production.",
-      "alt": "Professional SaaS development services"
+      "description": "Launch and scale subscription-based software with a product architecture designed for growth. Our SaaS development team in Pakistan works with startups and established companies alike. We cover product discovery, multi-tenant application design, billing, integrations, security, analytics, and the operational foundations required to run SaaS in production.",
+      "alt": "SaaS product development team in Pakistan"
     },
     "overview": {
       "title": "SaaS Products Built for Recurring Growth",
@@ -626,11 +638,15 @@ export const services = {
   },
   "erp-development": {
     "slug": "erp-development",
+    "seo": {
+      "title": "Custom ERP Software Development in Lahore",
+      "description": "Custom ERP software development in Lahore, Pakistan. Heapware connects finance, inventory, sales and HR in one system built around your workflow."
+    },
     "hero": {
       "line1": "ERP System",
       "line2": "Development Services",
-      "description": "Centralize operations with a custom ERP solution that connects departments, standardizes workflows, and gives decision-makers a clearer view of the business. We build systems around your actual processes rather than forcing teams into generic software.",
-      "alt": "Professional ERP software development services"
+      "description": "Heapware develops custom ERP software in Lahore for businesses across Pakistan. Centralize operations with an ERP solution that connects departments, standardizes workflows, and gives decision-makers a clearer view of the business. We build systems around your actual processes rather than forcing teams into generic software.",
+      "alt": "Custom ERP software development in Lahore"
     },
     "overview": {
       "title": "ERP Systems Built Around Your Operations",
@@ -834,11 +850,15 @@ export const services = {
   },
   "seo-services": {
     "slug": "seo-services",
+    "seo": {
+      "title": "SEO Services in Lahore, Pakistan",
+      "description": "Heapware offers SEO services in Lahore: technical SEO, keyword research, content and local SEO that grow organic traffic and leads. Get a free SEO audit."
+    },
     "hero": {
       "line1": "Search Engine",
       "line2": "Optimization Services",
-      "description": "Improve your visibility in organic search with an SEO program built around technical health, search intent, quality content, and measurable business outcomes. We turn search data into practical actions that help the right audience discover your brand.",
-      "alt": "Professional SEO services"
+      "description": "Our SEO services in Lahore improve your visibility in Google with an SEO program built around technical health, search intent, quality content, and measurable business outcomes. We turn search data into practical actions that help the right audience discover your brand.",
+      "alt": "SEO services in Lahore improving Google rankings"
     },
     "overview": {
       "title": "SEO That Connects Search Intent to Business Growth",
@@ -1042,11 +1062,15 @@ export const services = {
   },
   "digital-marketing": {
     "slug": "digital-marketing",
+    "seo": {
+      "title": "Digital Marketing Agency in Lahore",
+      "description": "Heapware is a digital marketing agency in Lahore running social media, Google Ads, content and conversion campaigns that turn attention into leads."
+    },
     "hero": {
       "line1": "Digital",
       "line2": "Marketing Services",
-      "description": "Build a measurable digital marketing engine that attracts the right audience, strengthens your brand, and turns attention into qualified opportunities. We connect strategy, content, paid campaigns, social channels, and conversion improvements around clear goals.",
-      "alt": "Professional digital marketing services"
+      "description": "As a digital marketing agency in Lahore, we help you build a measurable marketing engine that attracts the right audience, strengthens your brand, and turns attention into qualified opportunities. We connect strategy, content, paid campaigns, social channels, and conversion improvements around clear goals.",
+      "alt": "Digital marketing agency in Lahore planning campaigns"
     },
     "overview": {
       "title": "Digital Marketing Focused on Measurable Growth",

@@ -3,7 +3,7 @@ import { serviceSlugs } from "@/data/services";
 import { projects } from "@/data/projects";
 
 export default function sitemap() {
-  const pages = ["", "/about", "/services", "/Projects", "/career", "/contact"];
+  const pages = ["", "/about", "/services", "/projects", "/career", "/contact"];
 
   return [
     ...pages.map((path) => ({
@@ -17,7 +17,7 @@ export default function sitemap() {
       priority: 0.9,
     })),
     ...projects.map((project) => ({
-      url: `${site.url}/Projects/${project.slug}`,
+      url: `${site.url}/projects/${project.slug}`,
       changeFrequency: "yearly",
       priority: 0.6,
     })),
